@@ -1,0 +1,119 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=clean_coffees
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+read_coffees [shape=record rankdir=LR label="{<f0> read_coffees |<f1> Read coffees information from file.}"];
+normalize_origin_title [shape=record rankdir=LR label="{<f0> normalize_origin_title |<f1> Normalize origin title.}"];
+normalize_country_title [shape=record rankdir=LR label="{<f0> normalize_country_title |<f1> Normalize country title.}"];
+normalize_completed_desc [shape=record rankdir=LR label="{<f0> normalize_completed_desc |<f1> Normalize completed date.}"];
+normalize_created_desc [shape=record rankdir=LR label="{<f0> normalize_created_desc |<f1> Normalize created date.}"];
+normalize_state [shape=record rankdir=LR label="{<f0> normalize_state |<f1> Normalize state.}"];
+normalize_region [shape=record rankdir=LR label="{<f0> normalize_region |<f1> Normalize region.}"];
+normalize_producer [shape=record rankdir=LR label="{<f0> normalize_producer |<f1> Normalize producer.}"];
+normalize_name [shape=record rankdir=LR label="{<f0> normalize_name |<f1> Normalize name.}"];
+normalize_mill [shape=record rankdir=LR label="{<f0> normalize_mill |<f1> Normalize mill.}"];
+normalize_farm [shape=record rankdir=LR label="{<f0> normalize_farm |<f1> Normalize farm.}"];
+normalize_company [shape=record rankdir=LR label="{<f0> normalize_company |<f1> Normalize company.}"];
+normalize_city [shape=record rankdir=LR label="{<f0> normalize_city |<f1> Normalize city.}"];
+normalize_carrier [shape=record rankdir=LR label="{<f0> normalize_carrier |<f1> Normalize carrier.}"];
+normalize_buyer [shape=record rankdir=LR label="{<f0> normalize_buyer |<f1> Normalize buyer.}"];
+write_coffees [shape=record rankdir=LR label="{<f0> write_coffees |<f1> Write coffees information to file.}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+coffees_file_path
+coffees
+coffees_1
+coffees_2
+coffees_3
+coffees_4
+coffees_5
+coffees_6
+coffees_7
+coffees_8
+coffees_9
+coffees_10
+coffees_11
+coffees_12
+coffees_13
+coffees_14
+coffees_or_recipe_file_path
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+read_coffees -> coffees
+coffees_file_path -> read_coffees
+normalize_origin_title -> coffees_1
+coffees -> normalize_origin_title
+normalize_country_title -> coffees_2
+coffees_1 -> normalize_country_title
+normalize_completed_desc -> coffees_3
+coffees_2 -> normalize_completed_desc
+normalize_created_desc -> coffees_4
+coffees_3 -> normalize_created_desc
+normalize_state -> coffees_5
+coffees_4 -> normalize_state
+normalize_region -> coffees_6
+coffees_5 -> normalize_region
+normalize_producer -> coffees_7
+coffees_6 -> normalize_producer
+normalize_name -> coffees_8
+coffees_7 -> normalize_name
+normalize_mill -> coffees_9
+coffees_8 -> normalize_mill
+normalize_farm -> coffees_10
+coffees_9 -> normalize_farm
+normalize_company -> coffees_11
+coffees_10 -> normalize_company
+normalize_city -> coffees_12
+coffees_11 -> normalize_city
+normalize_carrier -> coffees_13
+coffees_12 -> normalize_carrier
+normalize_buyer -> coffees_14
+coffees_13 -> normalize_buyer
+write_coffees -> coffees_or_recipe_file_path
+openrefine_data_path -> write_coffees
+coffees_14 -> write_coffees
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+coffees_file_path_input_port [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+coffees_or_recipe_file_path_output_port [label=""]
+
+/* Edges from input ports to channels */
+coffees_file_path_input_port -> coffees_file_path
+
+/* Edges from channels to output ports */
+coffees_or_recipe_file_path -> coffees_or_recipe_file_path_output_port
+
+/* End of top-level graph */
+}

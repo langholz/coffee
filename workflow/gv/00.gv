@@ -1,0 +1,115 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=retrieve_and_clean_coffee_data
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+
+/* Style for nodes representing composite programs (sub-workflows) in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=2 fontname=Helvetica]
+
+/* Nodes representing composite programs (sub-workflows) in workflow */
+retrieve_save_and_normalize [shape=record rankdir=LR label="{<f0> retrieve_save_and_normalize |<f1> Retrieve and normalize the data.}"];
+clean_data_with_openrefine [shape=record rankdir=LR label="{<f0> clean_data_with_openrefine |<f1> Clean data using OpenRefine.}"];
+clean_data_with_r [shape=record rankdir=LR label="{<f0> clean_data_with_r |<f1> Clean coffee information using R.}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+coffee_info_url [shape=record rankdir=LR label="{<f0> coffee_info_url |<f1> https\://database.coffeeinstitute.org/api/coffees/arabicaAjax}"];
+coffee_details_url [shape=record rankdir=LR label="{<f0> coffee_details_url |<f1> https\://database.coffeeinstitute.org/api/coffee/random}"];
+coffee_info_start
+coffee_info_length
+download_path [shape=record rankdir=LR label="{<f0> download_path |<f1> ./data/download}"];
+openrefine_data_path [shape=record rankdir=LR label="{<f0> openrefine_data_path |<f1> ./data/openrefine}"];
+coffees_file_path [shape=record rankdir=LR label="{<f0> coffees_file_path |<f1> \{download_path\}/coffees.csv}"];
+coffee_grades_file_path [shape=record rankdir=LR label="{<f0> coffee_grades_file_path |<f1> \{download_path\}/coffee_grades.csv}"];
+coffee_greens_file_path [shape=record rankdir=LR label="{<f0> coffee_greens_file_path |<f1> \{download_path\}/coffee_greens.csv}"];
+clean_path [shape=record rankdir=LR label="{<f0> clean_path |<f1> ./data/clean}"];
+coffees_or_file_path [shape=record rankdir=LR label="{<f0> coffees_or_file_path |<f1> \{openrefine_data_path\}/coffees.csv}"];
+coffee_grades_or_file_path [shape=record rankdir=LR label="{<f0> coffee_grades_or_file_path |<f1> \{openrefine_data_path\}/coffee_grades.csv}"];
+coffee_greens_or_file_path [shape=record rankdir=LR label="{<f0> coffee_greens_or_file_path |<f1> \{openrefine_data_path\}/coffee_greens.csv}"];
+clean_coffees_file_path [shape=record rankdir=LR label="{<f0> clean_coffees_file_path |<f1> \{clean_path\}/coffees.csv}"];
+clean_coffee_grades_file_path [shape=record rankdir=LR label="{<f0> clean_coffee_grades_file_path |<f1> \{clean_path\}/coffee_grades.csv}"];
+clean_coffee_greens_file_path [shape=record rankdir=LR label="{<f0> clean_coffee_greens_file_path |<f1> \{clean_path\}/coffee_greens.csv}"];
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+retrieve_save_and_normalize -> coffees_file_path
+retrieve_save_and_normalize -> coffee_grades_file_path
+retrieve_save_and_normalize -> coffee_greens_file_path
+coffee_info_url -> retrieve_save_and_normalize
+coffee_details_url -> retrieve_save_and_normalize
+coffee_info_start -> retrieve_save_and_normalize
+coffee_info_length -> retrieve_save_and_normalize
+download_path -> retrieve_save_and_normalize
+clean_data_with_openrefine -> coffees_or_file_path
+clean_data_with_openrefine -> coffee_grades_or_file_path
+clean_data_with_openrefine -> coffee_greens_or_file_path
+openrefine_data_path -> clean_data_with_openrefine
+coffees_file_path -> clean_data_with_openrefine
+coffee_grades_file_path -> clean_data_with_openrefine
+coffee_greens_file_path -> clean_data_with_openrefine
+clean_data_with_r -> clean_coffees_file_path
+clean_data_with_r -> clean_coffee_grades_file_path
+clean_data_with_r -> clean_coffee_greens_file_path
+clean_path -> clean_data_with_r
+coffees_or_file_path -> clean_data_with_r
+coffee_grades_or_file_path -> clean_data_with_r
+coffee_greens_or_file_path -> clean_data_with_r
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+coffee_info_url_input_port [label=""]
+coffee_details_url_input_port [label=""]
+coffee_info_start_input_port [label=""]
+coffee_info_length_input_port [label=""]
+download_path_input_port [label=""]
+openrefine_data_path_input_port [label=""]
+clean_path_input_port [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+clean_coffees_file_path_output_port [label=""]
+clean_coffee_grades_file_path_output_port [label=""]
+clean_coffee_greens_file_path_output_port [label=""]
+
+/* Edges from input ports to channels */
+coffee_info_url_input_port -> coffee_info_url
+coffee_details_url_input_port -> coffee_details_url
+coffee_info_start_input_port -> coffee_info_start
+coffee_info_length_input_port -> coffee_info_length
+download_path_input_port -> download_path
+openrefine_data_path_input_port -> openrefine_data_path
+clean_path_input_port -> clean_path
+
+/* Edges from channels to output ports */
+clean_coffees_file_path -> clean_coffees_file_path_output_port
+clean_coffee_grades_file_path -> clean_coffee_grades_file_path_output_port
+clean_coffee_greens_file_path -> clean_coffee_greens_file_path_output_port
+
+/* End of top-level graph */
+}

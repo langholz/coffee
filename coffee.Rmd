@@ -1,0 +1,742 @@
+---
+title: "Coffee Quality Institute: Q Certified Arabica Coffees"
+author: "Elmar H. Langholz (elmarhl2@illinois.edu)"
+date: "`r format(Sys.time(), '%B %d %Y')`"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: xelatex
+  html_document:
+    toc: yes
+    toc_depth: 4
+    df_print: paged
+subtitle: 'CS 513: Theory and Practice of Data Cleaning, Summer 2019'
+urlcolor: cyan
+---
+
+***
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+options(scipen = 1, digits = 4, width = 80, fig.align = "center")
+library(httr)
+library(readr)
+library(tibble)
+library(jsonlite)
+library(tidyverse)
+library(lubridate)
+library(RSQLite)
+library(knitr)
+library(kableExtra)
+set.seed(1337)
+```
+
+```{r echo=FALSE, ref.label="setup_retrieve_data", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="setup_openrefine_retrieve_data", eval=TRUE}
+```
+
+```{r read_data, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+coffees_df <- read_csv(coffees_file_path)
+grades_df <- read_csv(coffee_grades_file_path)
+greens_df <- read_csv(coffee_greens_file_path)
+```
+
+## Overview
+
+The Coffee Quality Institute[^1] (CQI) is an international non-profit organization dedicated to improving the quality of coffee. As such, they provide tools and support for people that lack the understanding on how to measure the quality of the coffee they produce. They have compiled and shared their database[^2] of Q graded arabica[^3] and robusta[^4] coffees which contain details about the producer, its farm, the coffee cupping scores and green coffee analysis (GCA).
+
+The data is sufficiently clean and granular enough that we can correlate the farm and coffee lot to its grading, cupping scores and green coffee analysis. It can also allow us to perform analysis at the farm, producer or regional level with the intent of uncovering trends at the harvest year. With enough historical data, it can help identify patterns and predict quality based on any of these parameters. Adding other sources of data (e.g. historical weather conditions, air moisture, etc...), can potentially improve and make these predictions even more accurate.
+
+## Dataset
+
+The dataset was [acquired](#retrieve_data) using CQI's undocumented API, [normalized](#normalize_data) and then [saved](#normalize_data). At the time of obtaining this data there were only 3 robusta coffee records. Therefore, the focus was determined to fall fully on arabica coffees. In general the data is divided into three different areas: coffee information, grades/cupping scores and green analysis.
+
+### Coffee information
+
+The coffee information subset consists of `r nrow(coffees_df)` observations and has the following structure:
+
+```{r show_coffees_data, echo=FALSE, comment=NA}
+str(tibble::as_tibble(coffees_df), give.attr = FALSE, strict.width = "cut")
+```
+
+### Grades/Cupping scores
+
+The grades/cupping scores subset consists of `r nrow(grades_df)` observations and has the following structure:
+
+```{r show_coffee_grades_data, echo=FALSE, comment=NA}
+str(tibble::as_tibble(grades_df), give.attr = FALSE, strict.width = "cut")
+```
+
+### Green analysis
+
+The green analysis subset consists of `r nrow(greens_df)` observations and has the following structure:
+
+```{r show_coffee_green_data, echo=FALSE, comment=NA}
+str(tibble::as_tibble(greens_df), give.attr = FALSE, strict.width = "cut")
+```
+
+```{r remove_data, echo=FALSE, eval=TRUE}
+rm(coffees_df)
+rm(grades_df)
+rm(greens_df)
+```
+
+## Data cleaning with OpenRefine
+
+```{r read_openrefine_data, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
+openrefine_path <- file.path(data_path, "openrefine")
+coffees_or_file_path <- file.path(openrefine_path, "coffees.csv")
+coffee_greens_or_file_path <- file.path(openrefine_path, "coffee_greens.csv")
+coffee_grades_or_file_path <- file.path(openrefine_path, "coffee_grades.csv")
+coffees_or_df <- read_csv(coffees_or_file_path)
+grades_or_df <- read_csv(coffee_grades_or_file_path)
+greens_or_df <- read_csv(coffee_greens_or_file_path)
+```
+
+The coffee information dataset has several issues which were addressed using OpenRefine[^5]. The operation history has been stored as JSON files (`*_recipe.json`) under the `data/openrefine` directory.
+
+### Coffee information
+
+Corresponding to text columns the following was addressed: spelling mistakes/typos, inconsistency between abbreviation vs. no abbreviation, text casing mismatch, and extra spaces (leading, trailing and in between). These issues were present in the following columns of interest: `country_title`, `state`, `region`, `producer`, `name`, `mill`, `farm`, `company`, `city`, `carrier` and `buyer`. Date columns `completed_desc` and `created_desc` were also standardized to use ISO. Across the board, `NA` and `None` are used to convey the same meaning and were standardize to use either empty or `None` (one or the other).
+
+### Grades/Cupping scores
+
+No major changes were performed on this subset of the data.
+
+### Green analysis
+
+No major changes were performed on this subset of the data.
+
+## Data cleaning with R
+
+More transformations were performed using `R` which did not fit well using OpenRefine.
+
+### Coffee information
+
+```{r echo=FALSE, ref.label="normalize_altitude", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="standardize_altitude", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="standardize_weight", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="normalize_green_pass", eval=TRUE}
+```
+
+Some altitudes are ranges instead of units: **1500-2000**. Due to this, we [normalized](#altitude_normalization) it by calculating the mid-point between the range, and converted the values to numeric. Two different types of altitude units were used: feet (*ft*) and meters (*m*). These were [standardized](#altitude_unit_standardization) by converting feet to meters. As a point in hand, two different types of weight units were used: pounds (*lbs*) and kilograms (*kg*). These were [standardized](#altitude_unit_standardization) by converting pounds to kilograms. Finally, the green analysis pass column `green_pass` was [normalized](#green_pass_normalization) from numeric to logical.
+
+### Grades/Cupping scores
+
+```{r echo=FALSE, ref.label="normalize_pass", eval=TRUE}
+```
+
+The `pass` column was [normalized](#pass_normalization) from numeric to logical.
+
+### Green analysis
+
+No major changes were performed on this subset of the data.
+
+```{r echo=FALSE, ref.label="setup_clean_data", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="save_clean_data", eval=TRUE}
+```
+
+## Relational schema and integrity constraint checks
+
+```{r echo=FALSE, ref.label="setup_and_open_database", eval=TRUE}
+```
+
+
+Using the clean data a SQLite database was [setup and opened](#setup_and_open_database) and each data subset [written to](#write_data_and_list_tables) a corresponding table with the same name.
+
+### Coffee completion date should be after creation
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_completion_date) for coffee entries which completion date is before its creation date:
+
+```{r echo=FALSE, ref.label="ic_coffee_completion_date", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+This could mean that the cupping score/grading was finished before the entry was created.
+
+### Coffee altitude should be larger or equal than zero
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_altitude) for coffee entries that have an altitude less or equal than zero:
+
+```{r echo=FALSE, ref.label="ic_coffee_altitude", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+### Coffee cupping scores/grades should be between zero and ten
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_grades) for coffee entries that have grades less than zero or larger than ten:
+
+```{r echo=FALSE, ref.label="ic_coffee_grades", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+### Coffee cupping scores/grades should be have approximate total scores
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_grades_total) for coffee grades that do not have a close enough total score:
+
+```{r echo=FALSE, ref.label="ic_coffee_grades_total", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+### Coffee cupping scores/grades should correctly report passing vs. failing
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_grades_pass) for coffee grades that do not mark coffees with a score of larger than or equal to `80` as pass, otherwise fail:
+
+```{r echo=FALSE, ref.label="ic_coffee_grades_pass", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+### Coffee green analysis count should be larger than zero
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_greens) for coffee green analysis that have grades less than zero:
+
+```{r echo=FALSE, ref.label="ic_coffee_greens", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+### Coffee green analysis category totals should equal
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_greens_total) for coffee green analysis whose totals per category do not match the manually calculated values:
+
+```{r echo=FALSE, ref.label="ic_coffee_greens_total", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+In this case the manually calculated total amounts (`one_total` and `two_total`) are double ($2x$) the ones reported by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry.
+
+### Coffee green analysis category defects should equal
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_greens_defect) for coffee green analysis whose calculated defects per category do not match the manually calculated ones:
+
+```{r echo=FALSE, ref.label="ic_coffee_greens_defect", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+As in the case before for the same entry, we see that the manually calculated defect amounts (`one_defects` and `two_defects`) are larger by two times plus one ($2x + 1$) the reported value by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry.
+
+### Every coffee entry should have a at least one set of grades/cupping scores and green analysis
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_at_least_one) for coffee entries that do not exist in the grades/cupping scores and green analysis subset when they do within the coffee information:
+
+#### Grades/cupping scores
+
+```{r echo=FALSE, ref.label="ic_coffee_at_least_one_grades", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+#### Green analysis
+
+```{r echo=FALSE, ref.label="ic_coffee_at_least_one_greens", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+In this case we are missing an entry in both. It could mean that it still has not been added and/or reviewed. This entry would likely be removed from the data set.
+
+### Every coffee entry should have at most one set of grades/cupping scores and green analysis
+
+In denial form, [we report all the integrity constraint violations](#ic_coffee_at_most_one) for coffee entries that have more than one entries for the grades/cupping scores or green analysis subset:
+
+#### Grades/cupping scores
+
+```{r echo=FALSE, ref.label="ic_coffee_at_most_one_grades", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+#### Green analysis:
+
+```{r echo=FALSE, ref.label="ic_coffee_at_most_one_greens", eval=TRUE}
+```
+```{r echo=FALSE, eval=TRUE}
+kable(result) %>% kable_styling(position = "center")
+```
+
+No issues were found.
+
+```{r echo=FALSE, eval=TRUE}
+dbDisconnect(connection)
+```
+
+## Workflow
+
+A [retrieve and clean workflow](#retrieve_and_clean_workflow) was designed using YesWorkflow[^6] and is provided as supplemental information as `workflow/coffee.yw`. Following are multiple visualization levels of it.
+
+![Level 0 - Retrieve and clean workflow](./workflow/png/00.png)
+
+![Level 1 - Retrieve, save and normalize coffee data](./workflow/png/1-1.png)
+
+![Level 1 - Clean data with OpenRefine](./workflow/png/1-2.png)
+
+![Level 2 - Clean coffee information with OpenRefine](./workflow/png/1-2-1.png)
+
+![Level 1 - Clean data with R](./workflow/png/1-3.png)
+
+![Level 2 - Clean coffee informatino with R](./workflow/png/1-3-1.png)
+
+\pagebreak
+
+## Appendix
+
+### Retrieve data {#retrieve_data}
+
+```{r setup_retrieve_data, echo=TRUE, eval=FALSE}
+create_date_marker_file <- function (file_path) {
+  file_connection <- file(file_path)
+  current_date <- strftime(now(), "%Y-%m-%dT%H:%M:%S%z")
+  writeLines(current_date, file_connection)
+  close(file_connection)
+}
+
+data_path <- "./data"
+download_path <- file.path(data_path, "download")
+coffees_object_file_path <- file.path(download_path, "coffees.rds")
+coffee_details_object_file_path <- file.path(download_path, "coffee_details.rds")
+coffees_file_path <- file.path(download_path, "coffees.csv")
+coffee_grades_file_path <- file.path(download_path, "coffee_grades.csv")
+coffee_greens_file_path <- file.path(download_path, "coffee_greens.csv")
+coffee_date_file_path <- file.path(download_path, "coffees_date.txt")
+coffee_details_date_file_path <- file.path(download_path, "coffee_details_date.txt")
+```
+
+```{r retrieve_data, echo=TRUE, eval=FALSE}
+data_frame_from_list <- function (data) {
+  normalized_values <- lapply(data, function (row) {
+    row[sapply(row, is.null)] <- NA
+    unlist(row)
+  })
+  data_matrix <- do.call("rbind", normalized_values)
+  data_frame <- as.data.frame(data_matrix, stringsAsFactors = FALSE)
+  data_frame
+}
+
+retrieve_coffees <- function (
+  url = "https://database.coffeeinstitute.org/api/coffees/arabicaAjax",
+  start = 0,
+  length = 0) {
+  body <- list(start = start, length = length)
+  response <- POST(url, body = body, encode = "form")
+  value <- content(response)
+  data_frame <- data_frame_from_list(value$data)
+  data_frame
+}
+
+retrieve_coffee_details <- function (identifier, base_url) {
+  url <- file.path(base_url, identifier)
+  response <- GET(url)
+  value <- content(response)
+  value
+}
+
+retrieve_details <- function (
+  coffees_df,
+  base_url = "https://database.coffeeinstitute.org/api/coffee/random") {
+  identifiers <- as.numeric(coffees_df$random_id)
+  details_list <- lapply(identifiers, function (identifier) {
+    value <- retrieve_coffee_details(identifier, base_url)
+    value
+  })
+
+  details_list
+}
+
+dir.create(data_path, showWarnings = FALSE)
+dir.create(download_path, showWarnings = FALSE)
+coffees_df <- retrieve_coffees()
+saveRDS(coffees_df, file = coffees_object_file_path)
+create_date_marker_file(coffee_date_file_path)
+details <- retrieve_details(coffees_df)
+saveRDS(details, file = coffee_details_object_file_path)
+create_date_marker_file(coffee_details_date_file_path)
+```
+
+### Normalize data {#normalize_data}
+
+```{r normalize_data, echo=TRUE, eval=FALSE}
+normalize_details <- function (details_list) {
+  grade_by_id <- lapply(details_list, function (details) {
+    row <- NA
+    if (is.list(details$grade)) {
+      row <- details$grade
+      row$random_id <- details$random_id
+    }
+
+    row
+  })
+  grades_df <- data_frame_from_list(grade_by_id)
+  green_by_id <- lapply(details_list, function (details) {
+    row <- NA
+    if (is.list(details$green)) {
+      row <- details$green
+      row$random_id <- details$random_id
+    }
+
+    row
+  })
+
+  greens_df <- data_frame_from_list(green_by_id)
+  list(grades = grades_df, greens = greens_df)  
+}
+
+normalize_grades <- function (grades_df) {
+  grades_df <- grades_df[complete.cases(grades_df$random_id), ]
+  grades_df
+}
+
+normalize_greens <- function (greens_df) {
+  greens_df$pass <- as.logical(greens_df$pass)
+  greens_column_names <- colnames(greens_df)
+  remove <- c("color_title", "pass")
+  integer_column_names <- greens_column_names[!(greens_column_names %in% remove)]
+  for (column_name in integer_column_names) {
+    greens_df[[column_name]] <- as.numeric(greens_df[[column_name]])
+  }
+  
+  greens_df <- greens_df[complete.cases(greens_df$random_id), ]
+  greens_df
+}
+
+normalized_details <- normalize_details(details)
+grades_df <- normalize_grades(normalized_details$grades)
+greens_df <- normalize_greens(normalized_details$greens)
+```
+
+### Save data {#save_csv_data}
+
+```{r save_data, echo=TRUE, eval=FALSE}
+write_csv(coffees_df, coffees_file_path)
+write_csv(grades_df, coffee_grades_file_path)
+write_csv(greens_df, coffee_greens_file_path)
+rm(details)
+rm(normalized_details)
+```
+
+### Coffee information altitude normalization {#altitude_normalization}
+
+```{r normalize_altitude, echo=TRUE, eval=FALSE}
+range_1500_2000 <- coffees_or_df$altitude == "1500-2000"
+coffees_or_df$altitude[range_1500_2000] <- 1500 + ((2000 - 1500) / 2)
+coffees_or_df$altitude <- as.numeric(coffees_or_df$altitude)
+```
+
+### Coffee information altitude unit standardization {#altitude_unit_standardization}
+
+```{r standardize_altitude, echo=TRUE, eval=FALSE}
+feet_units <- coffees_or_df$altitude_unit == "ft"
+coffees_or_df$altitude[feet_units] <- coffees_or_df$altitude[feet_units] * 0.3048
+```
+
+### Coffee information weight unit standardization {#weight_unit_standardization}
+
+```{r standardize_weight, echo=TRUE, eval=FALSE}
+pound_units <- coffees_or_df$weight_unit == "lbs"
+coffees_or_df$weight[pound_units] <- coffees_or_df$weight[pound_units] * 0.453592
+```
+
+### Coffee information green analysis pass normalization {#green_pass_normalization}
+
+```{r normalize_green_pass, echo=TRUE, eval=FALSE}
+yes <- coffees_or_df$green_pass == "Y"
+no <- coffees_or_df$green_pass == "N"
+coffees_or_df$green_pass[yes] <- "TRUE"
+coffees_or_df$green_pass[no] <- "FALSE"
+coffees_or_df$green_pass <- as.logical(coffees_or_df$green_pass)
+```
+
+### Coffee grades/cupping scores pass conversion {#pass_normalization}
+
+```{r normalize_pass, echo=TRUE, eval=FALSE}
+greens_or_df$pass <- as.logical(greens_or_df$pass)
+```
+
+### Setup clean data {#setup_clean_data}
+
+```{r setup_clean_data, echo=TRUE, eval=FALSE}
+clean_path <- file.path(data_path, "clean")
+coffees_clean_file_path <- file.path(clean_path, "coffees.csv")
+coffee_grades_clean_file_path <- file.path(clean_path, "coffee_grades.csv")
+coffee_greens_clean_file_path <- file.path(clean_path, "coffee_greens.csv")
+dir.create(clean_path, showWarnings = FALSE)
+```
+
+### Save clean data {#save_clean_data}
+
+```{r save_clean_data, echo=TRUE, eval=FALSE}
+write_csv(coffees_or_df, coffees_clean_file_path)
+write_csv(grades_or_df, coffee_grades_clean_file_path)
+write_csv(greens_or_df, coffee_greens_clean_file_path)
+rm(coffees_or_df)
+rm(grades_or_df)
+rm(greens_or_df)
+```
+
+### Setup and open relational database {#setup_and_open_database}
+
+```{r read_clean_data, echo=TRUE, eval=FALSE}
+coffees <- read_csv(coffees_clean_file_path)
+grades <- read_csv(coffee_grades_clean_file_path)
+greens <- read_csv(coffee_greens_clean_file_path)
+```
+
+```{r setup_and_open_database, echo=TRUE, eval=FALSE}
+database_path <- file.path(data_path, "database")
+dir.create(database_path, showWarnings = FALSE)
+database_file_path <- file.path(database_path, "coffee.db")
+connection <- dbConnect(RSQLite::SQLite(), database_file_path)
+```
+
+### Write data and list tables {#write_data_and_list_tables}
+
+```{r write_data_and_list_tables, echo=TRUE, eval=FALSE}
+dbWriteTable(connection, "coffees", coffees)
+dbWriteTable(connection, "grades", grades)
+dbWriteTable(connection, "greens", greens)
+dbListTables(connection)
+```
+
+### Coffee completion integrity constraint {#ic_coffee_completion_date}
+
+```{r ic_coffee_completion_date, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id, created_desc as created, completed_desc as completed
+  FROM coffees
+ WHERE created_desc > completed_desc
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee altitude integrity constraint {#ic_coffee_altitude}
+
+```{r ic_coffee_altitude, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id, altitude
+  FROM coffees
+ WHERE altitude <= 0
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee grades integrity constraint {#ic_coffee_grades}
+
+```{r ic_coffee_grades, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id
+  FROM grades
+ WHERE aroma < 0 OR aroma > 10 OR flavor < 0 OR flavor > 10
+       OR after < 0 OR after > 10 OR acidity < 0 OR acidity > 10
+       OR body < 0 OR body > 10 OR mouthfeel < 0 OR mouthfeel > 10
+       OR balance < 0 OR balance > 10 OR uniformity < 0 OR uniformity > 10
+       OR clean < 0 OR clean > 10 OR sweet < 0 OR sweet > 10
+       OR overall < 0 OR overall > 10
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee grades total integrity constraint {#ic_coffee_grades_total}
+
+```{r ic_coffee_grades_total, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT E.random_id, A.total as actual_total, E.total_sum as expected_total
+  FROM grades as A
+  JOIN (
+         SELECT random_id,
+                (aroma + flavor + after + acidity + body
+                  + mouthfeel + balance + uniformity + clean
+                  + sweet + overall) as total_sum
+           FROM grades
+       ) as E
+    ON A.random_id = E.random_id
+ WHERE ABS(A.total - E.total_sum) > 0.0001
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee grades pass integrity constraint {#ic_coffee_grades_pass}
+
+```{r ic_coffee_grades_pass, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id, total, pass
+  FROM grades
+ WHERE (total >= 80 AND pass < 1)
+       OR (total < 80 AND pass > 0)
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee green analysis values integrity constraint {#ic_coffee_greens}
+
+```{r ic_coffee_greens, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id
+  FROM greens
+ WHERE full_black < 0 OR full_sour < 0  OR dried_cherry < 0 OR fungus < 0
+       OR severe_insect < 0 OR foreign_matter < 0 OR partial_black < 0
+       OR partial_sour < 0 OR parchment < 0 OR floater < 0 OR immature < 0
+       OR withered < 0 OR shell < 0 OR broken < 0 OR hull < 0 OR slight_insect < 0
+       OR moisture < 0 OR quakers < 0 OR category_one_total < 0
+       OR category_two_total < 0 OR category_one_equivalent < 0
+       OR category_two_equivalent < 0
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee green analysis totals {#ic_coffee_greens_total}
+
+```{r ic_coffee_greens_total, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT A.random_id, A.one_total, B.category_one_total,
+       A.two_total, B.category_two_total
+  FROM (
+        SELECT random_id,
+               (full_black + full_sour + dried_cherry
+                + fungus + severe_insect + foreign_matter) as one_total,
+               (partial_black + partial_sour + parchment + floater + immature
+                + withered + shell + broken + hull + slight_insect) as two_total
+          FROM greens
+       ) as A
+  JOIN greens as B
+    ON A.random_id = B.random_id
+ WHERE ABS(A.one_total - B.category_one_total) > 0
+       OR ABS(A.two_total - B.category_two_total) > 0
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee green analysis defects {#ic_coffee_greens_defect}
+
+```{r ic_coffee_greens_defect, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT A.random_id, A.one_defects, B.category_one_equivalent,
+       A.two_defects, B.category_two_equivalent
+  FROM (
+        SELECT random_id,
+               (full_black + full_sour + dried_cherry
+                + fungus + FLOOR(severe_insect / 5) + foreign_matter) as one_defects,
+               (FLOOR(partial_black / 3) + FLOOR(partial_sour / 3)
+                + FLOOR(parchment / 5) + FLOOR(floater / 5)
+                + FLOOR(immature / 5) + FLOOR(withered / 5)
+                + FLOOR(shell / 5) + FLOOR(broken / 5)
+                + FLOOR(hull / 5) + FLOOR(slight_insect / 10)) as two_defects
+          FROM greens
+       ) as A
+  JOIN greens as B
+    ON A.random_id = B.random_id
+ WHERE ABS(A.one_defects - B.category_one_equivalent) > 0
+       OR ABS(A.two_defects - B.category_two_equivalent) > 0
+"
+result <- dbGetQuery(connection, query)
+```
+
+
+### Coffee at least one grade or greens integrity constraint {#ic_coffee_at_least_one}
+
+```{r ic_coffee_at_least_one_grades, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id, farm, mill, producer
+  FROM coffees
+ WHERE random_id NOT IN (SELECT random_id FROM grades)
+"
+result <- dbGetQuery(connection, query)
+```
+
+```{r ic_coffee_at_least_one_greens, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id, farm, mill, producer
+  FROM coffees
+ WHERE random_id NOT IN (SELECT random_id FROM greens)
+"
+result <- dbGetQuery(connection, query)
+```
+
+### Coffee at most one grades or greens integrity constraint {#ic_coffee_at_most_one}
+
+```{r ic_coffee_at_most_one_grades, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id
+  FROM coffees
+ WHERE random_id IN (
+    SELECT random_id
+      FROM (
+        SELECT random_id, count(*) as count
+          FROM grades GROUP BY random_id
+      )
+    WHERE count > 1
+ )
+"
+result <- dbGetQuery(connection, query)
+```
+
+```{r ic_coffee_at_most_one_greens, echo=TRUE, eval=FALSE}
+query <-
+"
+SELECT random_id
+  FROM coffees
+ WHERE random_id IN (
+    SELECT random_id
+      FROM (
+        SELECT random_id, count(*) as count
+          FROM greens GROUP BY random_id
+      )
+    WHERE count > 1
+ )
+"
+result <- dbGetQuery(connection, query)
+```
+
+[^1]: Coffee Quality Institute. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://www.coffeeinstitute.org/
+[^2]: Arabica Coffees - Q Coffee. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://database.coffeeinstitute.org/coffees/arabica
+[^3]: Coffea arabica. (2019, May 15). In *Wikipedia*, *The Free Encyclopedia*. Retrieved May 27, 2019 from https://en.wikipedia.org/wiki/Coffea_arabica
+[^4]: Robusta coffee. (2019, May 16). http://openrefine.org/http://openrefine.org/ Retrieved May 27, 2019 from https://en.wikipedia.org/wiki/Robusta_coffee
+[^5]: openrefine.github.com. In *OpenRefine*. Retrieved June 3, 2019 from http://openrefine.org/
+[^6]: YesWorkflow - GitHub. In *GitHub*. Retrieved June 6, 2019 from https://github.com/yesworkflow-org/

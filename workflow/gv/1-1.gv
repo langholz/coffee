@@ -1,0 +1,101 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=retrieve_save_and_normalize
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+retrieve_coffees [shape=record rankdir=LR label="{<f0> retrieve_coffees |<f1> Retrieves all the coffee information.}"];
+retrieve_coffee_details [shape=record rankdir=LR label="{<f0> retrieve_coffee_details |<f1> Retrieves all the coffee details\: grading/cupping scores and green analysis.}"];
+save_raw_data [shape=record rankdir=LR label="{<f0> save_raw_data |<f1> Saves the raw data corresponding to the coffee.}"];
+normalize_raw_data [shape=record rankdir=LR label="{<f0> normalize_raw_data |<f1> Normalizes the data by splitting it into separate functional CSV data files.}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+coffee_info_url [shape=record rankdir=LR label="{<f0> coffee_info_url |<f1> https\://database.coffeeinstitute.org/api/coffees/arabicaAjax}"];
+coffee_info_start
+coffee_info_length
+coffees_info
+coffee_details_url [shape=record rankdir=LR label="{<f0> coffee_details_url |<f1> https\://database.coffeeinstitute.org/api/coffee/random}"];
+download_path [shape=record rankdir=LR label="{<f0> download_path |<f1> ./data/download}"];
+coffee_details
+coffees_object_file_path [shape=record rankdir=LR label="{<f0> coffees_object_file_path |<f1> \{download_path\}/coffees.rds}"];
+coffee_details_file_path [shape=record rankdir=LR label="{<f0> coffee_details_file_path |<f1> \{download_path\}/coffee_details.rds}"];
+coffees_file_path [shape=record rankdir=LR label="{<f0> coffees_file_path |<f1> \{download_path\}/coffees.csv}"];
+coffee_grades_file_path [shape=record rankdir=LR label="{<f0> coffee_grades_file_path |<f1> \{download_path\}/coffee_grades.csv}"];
+coffee_greens_file_path [shape=record rankdir=LR label="{<f0> coffee_greens_file_path |<f1> \{download_path\}/coffee_greens.csv}"];
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+retrieve_coffees -> coffees_info
+coffee_info_url -> retrieve_coffees
+coffee_info_start -> retrieve_coffees
+coffee_info_length -> retrieve_coffees
+retrieve_coffee_details -> coffee_details
+coffees_info -> retrieve_coffee_details
+coffee_details_url -> retrieve_coffee_details
+save_raw_data -> coffees_object_file_path
+save_raw_data -> coffee_info_download_date_file_path
+save_raw_data -> coffee_details_file_path
+save_raw_data -> coffee_details_download_date_file_path
+download_path -> save_raw_data
+coffees_info -> save_raw_data
+coffee_details -> save_raw_data
+normalize_raw_data -> coffees_file_path
+normalize_raw_data -> coffee_grades_file_path
+normalize_raw_data -> coffee_greens_file_path
+download_path -> normalize_raw_data
+coffees_object_file_path -> normalize_raw_data
+coffee_details_file_path -> normalize_raw_data
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+coffee_info_url_input_port [label=""]
+coffee_details_url_input_port [label=""]
+coffee_info_start_input_port [label=""]
+coffee_info_length_input_port [label=""]
+download_path_input_port [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+coffees_file_path_output_port [label=""]
+coffee_grades_file_path_output_port [label=""]
+coffee_greens_file_path_output_port [label=""]
+
+/* Edges from input ports to channels */
+coffee_info_url_input_port -> coffee_info_url
+coffee_details_url_input_port -> coffee_details_url
+coffee_info_start_input_port -> coffee_info_start
+coffee_info_length_input_port -> coffee_info_length
+download_path_input_port -> download_path
+
+/* Edges from channels to output ports */
+coffees_file_path -> coffees_file_path_output_port
+coffee_grades_file_path -> coffee_grades_file_path_output_port
+coffee_greens_file_path -> coffee_greens_file_path_output_port
+
+/* End of top-level graph */
+}

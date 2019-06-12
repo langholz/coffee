@@ -1,0 +1,285 @@
+# @begin retrieve_and_clean_coffee_data @desc Retrieve and clean the coffee data.
+# @in coffee_info_url @uri https://database.coffeeinstitute.org/api/coffees/arabicaAjax @desc The url corresponding to the end-point.
+# @in coffee_details_url @uri https://database.coffeeinstitute.org/api/coffee/random @desc The url corresponding to the end-point.
+# @in coffee_info_start @desc The paging offset to use.
+# @in coffee_info_length @desc The amount of coffees to retrieve.
+# @in download_path @uri ./data/download @desc The path to download the raw data to.
+# @in openrefine_data_path @uri ./data/openrefine @desc The path where the clean OpenRefine data is stored.
+# @in clean_path @uri ./data/clean @desc The path where the final clean data is stored.
+
+### Retrieve, save and normalize data
+
+# @begin retrieve_save_and_normalize @desc Retrieve and normalize the data.
+# @in coffee_info_url @uri https://database.coffeeinstitute.org/api/coffees/arabicaAjax @desc The url corresponding to the end-point.
+# @in coffee_details_url @uri https://database.coffeeinstitute.org/api/coffee/random @desc The url corresponding to the end-point.
+# @in coffee_info_start @desc The paging offset to use.
+# @in coffee_info_length @desc The amount of coffees to retrieve.
+# @in download_path @uri ./data/download @desc The path to download the raw data to.
+
+# @begin retrieve_coffees @desc Retrieves all the coffee information.
+# @in coffee_info_url @uri https://database.coffeeinstitute.org/api/coffees/arabicaAjax @desc The url corresponding to the end-point.
+# @in coffee_info_start @desc The paging offset to use.
+# @in coffee_info_length @desc The amount of coffees to retrieve.
+# @out coffees_info @desc The collection of coffee information.
+# @end retrieve_coffees
+
+# @begin retrieve_coffee_details @desc Retrieves all the coffee details: grading/cupping scores and green analysis.
+# @in coffees_info @desc The coffee information to retrieve the details for. 
+# @in coffee_details_url @uri https://database.coffeeinstitute.org/api/coffee/random @desc The url corresponding to the end-point.
+# @out coffee_details @desc The collection of coffee details for the provided information.
+# @end retrieve_coffee_details
+
+# @begin save_raw_data @desc Saves the raw data corresponding to the coffee.
+# @in download_path
+# @in coffees_info
+# @in coffee_details
+# @out coffees_object_file_path @uri {download_path}/coffees.rds
+# @out coffee_info_download_date_file_path @uri {download_path}/coffees_data.txt
+# @out coffee_details_file_path @uri {download_path}/coffee_details.rds
+# @out coffee_details_download_date_file_path @uri {download_path}/coffees_details_data.txt
+# @end save_raw_data
+
+# @begin normalize_raw_data @desc Normalizes the data by splitting it into separate functional CSV data files.
+# @in download_path
+# @in coffees_object_file_path
+# @in coffee_details_file_path
+# @out coffees_file_path @uri {download_path}/coffees.csv
+# @out coffee_grades_file_path @uri {download_path}/coffee_grades.csv
+# @out coffee_greens_file_path @uri {download_path}/coffee_greens.csv
+# @end normalize_raw_data
+
+# @out coffees_file_path @uri {download_path}/coffees.csv
+# @out coffee_grades_file_path @uri {download_path}/coffee_grades.csv
+# @out coffee_greens_file_path @uri {download_path}/coffee_greens.csv
+# @end retrieve_save_and_normalize
+
+### Clean data with OpenRefine
+
+# @begin clean_data_with_openrefine @desc Clean data using OpenRefine.
+# @in openrefine_data_path @uri ./data/openrefine @desc The path where the clean OpenRefine data is stored.
+# @in coffees_file_path @uri {download_path}/coffees.csv
+# @in coffee_grades_file_path @uri {download_path}/coffee_grades.csv
+# @in coffee_greens_file_path @uri {download_path}/coffee_greens.csv
+
+# @begin clean_coffees @desc Clean coffee information using OpenRefine.
+# @in coffees_file_path
+# @out coffees_or_file_path @uri {openrefine_data_path}/coffees.csv
+
+# @begin read_coffees @desc Read coffees information from file.
+# @in coffees_file_path
+# @out coffees
+# @end read_coffees
+
+# @begin normalize_origin_title @desc Normalize origin title.
+# @in coffees
+# @out coffees_1
+# @end normalize_origin_title
+
+# @begin normalize_country_title @desc Normalize country title.
+# @in coffees_1
+# @out coffees_2
+# @end normalize_country_title
+
+# @begin normalize_completed_desc @desc Normalize completed date.
+# @in coffees_2
+# @out coffees_3
+# @end normalize_completed_desc
+
+# @begin normalize_created_desc @desc Normalize created date.
+# @in coffees_3
+# @out coffees_4
+# @end normalize_created_desc
+
+# @begin normalize_state @desc Normalize state.
+# @in coffees_4
+# @out coffees_5
+# @end normalize_state
+
+# @begin normalize_region @desc Normalize region.
+# @in coffees_5
+# @out coffees_6
+# @end normalize_region
+
+# @begin normalize_producer @desc Normalize producer.
+# @in coffees_6
+# @out coffees_7
+# @end normalize_producer
+
+# @begin normalize_name @desc Normalize name.
+# @in coffees_7
+# @out coffees_8
+# @end normalize_name
+
+# @begin normalize_mill @desc Normalize mill.
+# @in coffees_8
+# @out coffees_9
+# @end normalize_mill
+
+# @begin normalize_farm @desc Normalize farm.
+# @in coffees_9
+# @out coffees_10
+# @end normalize_farm
+
+# @begin normalize_company @desc Normalize company.
+# @in coffees_10
+# @out coffees_11
+# @end normalize_company
+
+# @begin normalize_city @desc Normalize city.
+# @in coffees_11
+# @out coffees_12
+# @end normalize_city
+
+# @begin normalize_carrier @desc Normalize carrier.
+# @in coffees_12
+# @out coffees_13
+# @end normalize_carrier
+
+# @begin normalize_buyer @desc Normalize buyer.
+# @in coffees_13
+# @out coffees_14
+# @end normalize_buyer
+
+# @begin write_coffees @desc Write coffees information to file.
+# @in openrefine_data_path
+# @in coffees_14
+# @out coffees_or_recipe_file_path
+# @end write_coffees
+
+# @out coffees_or_recipe_file_path @uri {openrefine_data_path}/coffees_recipe.json
+# @end clean_coffees
+
+# @begin clean_coffee_grades @desc Clean coffee grades using OpenRefine.
+# @in coffee_grades_file_path
+
+# @begin read_coffee_grades @desc Read coffees grades from file.
+# @in coffee_grades_file_path
+# @out coffee_grades
+# @end read_coffee_grades
+
+# @begin write_coffee_grades @desc Write coffee grades to file.
+# @in openrefine_data_path
+# @in coffee_grades
+# @out coffee_grades_or_file_path
+# @end write_coffee_grades
+
+# @out coffee_grades_or_file_path @uri {openrefine_data_path}/coffee_grades.csv
+# @out coffee_grades_or_recipe_file_path @uri {openrefine_data_path}/coffee_grades_recipe.json
+# @end clean_coffee_grades
+
+# @begin clean_coffee_greens @desc Clean coffee green analysis using OpenRefine.
+# @in coffee_greens_file_path
+
+# @begin read_coffee_greens @desc Read coffee green analysis from file.
+# @in coffee_greens_file_path
+# @out coffee_greens
+# @end read_coffee_greens
+
+# @begin write_coffee_greens @desc Write coffee green analysis to file.
+# @in openrefine_data_path
+# @in coffee_greens
+# @out coffee_greens_or_file_path
+# @end write_coffee_greens
+
+# @out coffee_greens_or_file_path @uri {openrefine_data_path}/coffee_greens.csv
+# @out coffee_greens_or_recipe_file_path @uri {openrefine_data_path}/coffee_greens_recipe.json
+# @end clean_coffee_greens
+
+# @out coffees_or_file_path @uri {openrefine_data_path}/coffees.csv
+# @out coffee_grades_or_file_path @uri {openrefine_data_path}/coffee_grades.csv
+# @out coffee_greens_or_file_path @uri {openrefine_data_path}/coffee_greens.csv
+# @end clean_data_with_openrefine
+
+### Clean data with R
+
+# @begin clean_data_with_r @desc Clean coffee information using R.
+# @in clean_path @uri ./data/clean @desc The path where the final clean data is stored.
+# @in coffees_or_file_path @uri {openrefine_data_path}/coffees.csv
+# @in coffee_grades_or_file_path @uri {openrefine_data_path}/coffee_grades.csv
+# @in coffee_greens_or_file_path @uri {openrefine_data_path}/coffee_greens.csv
+
+# @begin clean_coffees @desc Clean coffee information using R.
+# @in coffees_or_file_path
+
+# @begin read_coffees
+# @in coffees_or_file_path
+# @out coffees
+# @end read_coffees
+
+# @begin normalize_altitude @desc Normalizes the range altitudes into points by calculating the mid-point.
+# @in coffees
+# @out coffees_1
+# @end normalize_altitude
+
+# @begin standardize_altitude_units @desc Standardize altitude units from feet to meters.
+# @in coffees_1
+# @out coffees_2
+# @end standardize_altitude_units
+
+# @begin standardize_weight_units @desc Standardize weight units from pounds to kilograms.
+# @in coffees_2
+# @out coffees_3
+# @end standardize_weight_units
+
+# @begin normalize_green_pass @desc Normalize green pass field from numeric to logical.
+# @in coffees_3
+# @out coffees_4
+# @end normalize_green_pass
+
+# @begin save_coffees
+# @in clean_path
+# @in coffees_4
+# @out clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @end save_coffees
+
+# @out clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @end clean_coffees
+
+# @begin clean_coffee_grades @desc Clean coffee grades using R.
+# @in coffee_grades_or_file_path
+
+# @begin read_coffee_grades
+# @in coffee_grades_or_file_path
+# @out coffee_grades
+# @end read_coffee_grades
+
+# @begin normalize_pass @desc Normalizes the pass field from numeric to logical.
+# @in coffee_grades
+# @out coffee_grades_1
+# @end normalize_altitude
+
+# @begin save_coffee_grades
+# @in clean_path
+# @in coffee_grades_1
+# @out clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @end save_coffee_grades
+
+# @out clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @end clean_coffee_grades
+
+# @begin clean_coffee_greens @desc Clean coffee green analysis using R.
+# @in coffee_greens_or_file_path
+
+# @begin read_coffee_greens
+# @in coffee_greens_or_file_path
+# @out coffee_greens
+# @end read_coffee_greens
+
+# @begin save_coffees_greens
+# @in clean_path
+# @in coffee_greens
+# @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+# @end save_coffees_greens
+
+# @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+# @end clean_coffee_greens
+
+# @out clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @out clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+# @end clean_data_with_r
+
+# @out clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @out clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+# @end retrieve_and_clean_coffee_data
