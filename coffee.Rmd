@@ -11,6 +11,9 @@ output:
     toc: yes
     toc_depth: 4
     df_print: paged
+header-includes:
+  \usepackage{float}
+  \floatplacement{figure}{H}
 subtitle: 'CS 513: Theory and Practice of Data Cleaning, Summer 2019'
 urlcolor: cyan
 ---
@@ -43,15 +46,21 @@ grades_df <- read_csv(coffee_grades_file_path)
 greens_df <- read_csv(coffee_greens_file_path)
 ```
 
-## Overview
+## Introduction and Overview
 
 The Coffee Quality Institute[^1] (CQI) is an international non-profit organization dedicated to improving the quality of coffee. As such, they provide tools and support for people that lack the understanding on how to measure the quality of the coffee they produce. They have compiled and shared their database[^2] of Q graded arabica[^3] and robusta[^4] coffees which contain details about the producer, its farm, the coffee cupping scores and green coffee analysis (GCA).
 
-The data is sufficiently clean and granular enough that we can correlate the farm and coffee lot to its grading, cupping scores and green coffee analysis. It can also allow us to perform analysis at the farm, producer or regional level with the intent of uncovering trends at the harvest year. With enough historical data, it can help identify patterns and predict quality based on any of these parameters. Adding other sources of data (e.g. historical weather conditions, air moisture, etc...), can potentially improve and make these predictions even more accurate.
+As a use case, assume we want to open up our coffee sales business from wholesale to retail. In order to do this we want to leverage the data from CQI, our primary coffee provider, to implement a feature in our platform to recommend coffee. Since our target market consists of specialty coffee enthusiasts, roasters and baristas we are able to construct an advanced coffee profile with their preferences. For this to work, we must clean the CQI data and then leverage it to build a recommender system that will proactively perform these recommendations over time.
 
-## Dataset
+Unlike with regular coffee which is normally dark roasted to the maximum level possible, in specialty coffee the quality matters a lot more since the flavors and notes are obtained through a light roast. However, depending on preference, one might find that one is willing to sacrifice different types of quality for price (e.g. you don't care as much about aroma but you want flavor and find the presence of slight insect issues or broken beans irrelevant).
 
-The dataset was [acquired](#retrieve_data) using CQI's undocumented API, [normalized](#normalize_data) and then [saved](#normalize_data). At the time of obtaining this data there were only 3 robusta coffee records. Therefore, the focus was determined to fall fully on arabica coffees. In general the data is divided into three different areas: coffee information, grades/cupping scores and green analysis.
+In order to make this data fit for use, we will focus on accuracy, completeness and consistency of the measured coffee quality entries. Specifically, we would like to focus on the macro and micro-location details, coffee details and quality which consists of grading/cupping scores as well as green coffee analysis.
+
+The data is sufficiently clean and granular enough that we can correlate the farm and coffee lot to its grading/cupping scores and green coffee analysis. It can also allow us to perform analysis at the farm, producer or regional level with the intent of uncovering trends at the harvest year. With enough historical data, it can help identify patterns and predict quality based on any of these parameters. Adding other sources of data (e.g. historical weather conditions, air moisture, etc...), can potentially improve and make these predictions even more accurate.
+
+## Initial assessment of the dataset
+
+The dataset was [acquired](#retrieve_data) using CQI's undocumented API, then it [normalized](#normalize_data) and [saved](#normalize_data). At the time of obtaining this data there were only 3 robusta coffee records. Therefore, the focus was determined to fall fully on arabica coffees. In general the data is divided into three different areas and therefore files: coffee information, grades/cupping scores and green analysis.
 
 ### Coffee information
 
@@ -83,7 +92,9 @@ rm(grades_df)
 rm(greens_df)
 ```
 
-## Data cleaning with OpenRefine
+## Data Cleaning methods and process
+
+### Data cleaning with OpenRefine
 
 ```{r read_openrefine_data, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
 openrefine_path <- file.path(data_path, "openrefine")
@@ -95,25 +106,25 @@ grades_or_df <- read_csv(coffee_grades_or_file_path)
 greens_or_df <- read_csv(coffee_greens_or_file_path)
 ```
 
-The coffee information dataset has several issues which were addressed using OpenRefine[^5]. The operation history has been stored as JSON files (`*_recipe.json`) under the `data/openrefine` directory.
+The coffee information dataset has several issues which were addressed using OpenRefine[^5]. The operation history has been stored in the supplemental information as JSON files (`*_recipe.json`) under the `data/openrefine` directory.
 
-### Coffee information
+#### Coffee information
 
 Corresponding to text columns the following was addressed: spelling mistakes/typos, inconsistency between abbreviation vs. no abbreviation, text casing mismatch, and extra spaces (leading, trailing and in between). These issues were present in the following columns of interest: `country_title`, `state`, `region`, `producer`, `name`, `mill`, `farm`, `company`, `city`, `carrier` and `buyer`. Date columns `completed_desc` and `created_desc` were also standardized to use ISO. Across the board, `NA` and `None` are used to convey the same meaning and were standardize to use either empty or `None` (one or the other).
 
-### Grades/Cupping scores
+#### Grades/Cupping scores
 
 No major changes were performed on this subset of the data.
 
-### Green analysis
+#### Green analysis
 
 No major changes were performed on this subset of the data.
 
-## Data cleaning with R
+### Data cleaning with R
 
 More transformations were performed using `R` which did not fit well using OpenRefine.
 
-### Coffee information
+#### Coffee information
 
 ```{r echo=FALSE, ref.label="normalize_altitude", eval=TRUE}
 ```
@@ -129,14 +140,14 @@ More transformations were performed using `R` which did not fit well using OpenR
 
 Some altitudes are ranges instead of units: **1500-2000**. Due to this, we [normalized](#altitude_normalization) it by calculating the mid-point between the range, and converted the values to numeric. Two different types of altitude units were used: feet (*ft*) and meters (*m*). These were [standardized](#altitude_unit_standardization) by converting feet to meters. As a point in hand, two different types of weight units were used: pounds (*lbs*) and kilograms (*kg*). These were [standardized](#altitude_unit_standardization) by converting pounds to kilograms. Finally, the green analysis pass column `green_pass` was [normalized](#green_pass_normalization) from numeric to logical.
 
-### Grades/Cupping scores
+#### Grades/Cupping scores
 
 ```{r echo=FALSE, ref.label="normalize_pass", eval=TRUE}
 ```
 
 The `pass` column was [normalized](#pass_normalization) from numeric to logical.
 
-### Green analysis
+#### Green analysis
 
 No major changes were performed on this subset of the data.
 
@@ -146,150 +157,154 @@ No major changes were performed on this subset of the data.
 ```{r echo=FALSE, ref.label="save_clean_data", eval=TRUE}
 ```
 
-## Relational schema and integrity constraint checks
+
+### Relational schema and integrity constraint checks
 
 ```{r echo=FALSE, ref.label="setup_and_open_database", eval=TRUE}
 ```
 
+Using the clean data a SQLite database was [setup and opened](#setup_and_open_database) and each data subset [written to](#write_data_and_list_tables) a corresponding table with the same name. In order to address violation constraints, rows corresponding to these were [removed](#remove_ic_violations).
 
-Using the clean data a SQLite database was [setup and opened](#setup_and_open_database) and each data subset [written to](#write_data_and_list_tables) a corresponding table with the same name.
-
-### Coffee completion date should be after creation
+#### Coffee completion date should be after creation {#content_ic_coffee_completion_date}
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_completion_date) for coffee entries which completion date is before its creation date:
 
 ```{r echo=FALSE, ref.label="ic_coffee_completion_date", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center")%>% row_spec(0, bold = TRUE)
 ```
 
-This could mean that the cupping score/grading was finished before the entry was created.
+This could mean that the cupping score/grading was finished before the entry was created within the system. For this reason, we keep the entries.
 
-### Coffee altitude should be larger or equal than zero
+#### Coffee altitude should be larger or equal than zero
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_altitude) for coffee entries that have an altitude less or equal than zero:
 
 ```{r echo=FALSE, ref.label="ic_coffee_altitude", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
 
-### Coffee cupping scores/grades should be between zero and ten
+#### Coffee cupping scores/grades should be between zero and ten
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_grades) for coffee entries that have grades less than zero or larger than ten:
 
 ```{r echo=FALSE, ref.label="ic_coffee_grades", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
 
-### Coffee cupping scores/grades should be have approximate total scores
+#### Coffee cupping scores/grades should be have approximate total scores
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_grades_total) for coffee grades that do not have a close enough total score:
 
 ```{r echo=FALSE, ref.label="ic_coffee_grades_total", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
 
-### Coffee cupping scores/grades should correctly report passing vs. failing
+#### Coffee cupping scores/grades should correctly report passing vs. failing
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_grades_pass) for coffee grades that do not mark coffees with a score of larger than or equal to `80` as pass, otherwise fail:
 
 ```{r echo=FALSE, ref.label="ic_coffee_grades_pass", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
 
-### Coffee green analysis count should be larger than zero
+#### Coffee green analysis count should be larger than zero
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_greens) for coffee green analysis that have grades less than zero:
 
 ```{r echo=FALSE, ref.label="ic_coffee_greens", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
 
-### Coffee green analysis category totals should equal
+#### Coffee green analysis category totals should equal {#content_ic_coffee_greens_total}
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_greens_total) for coffee green analysis whose totals per category do not match the manually calculated values:
 
 ```{r echo=FALSE, ref.label="ic_coffee_greens_total", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+ic_violation_ids_to_remove <- c(ic_violation_ids_to_remove, result$random_id)
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-In this case the manually calculated total amounts (`one_total` and `two_total`) are double ($2x$) the ones reported by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry.
+In this case the manually calculated total amounts (`one_total` and `two_total`) are double ($2x$) the ones reported by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry so it will be removed from the data set.
 
-### Coffee green analysis category defects should equal
+#### Coffee green analysis category defects should equal {#content_ic_coffee_greens_defect}
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_greens_defect) for coffee green analysis whose calculated defects per category do not match the manually calculated ones:
 
 ```{r echo=FALSE, ref.label="ic_coffee_greens_defect", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+ic_violation_ids_to_remove <- c(ic_violation_ids_to_remove, result$random_id)
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-As in the case before for the same entry, we see that the manually calculated defect amounts (`one_defects` and `two_defects`) are larger by two times plus one ($2x + 1$) the reported value by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry.
+As in the case before for the same entry, we see that the manually calculated defect amounts (`one_defects` and `two_defects`) are larger by two times plus one ($2x + 1$) the reported value by the data set. This could be caused by a either an ETL process gone wrong or an incorrect data entry so it will be removed from the data set.
 
-### Every coffee entry should have a at least one set of grades/cupping scores and green analysis
+#### Every coffee entry should have a at least one set of grades/cupping scores and green analysis
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_at_least_one) for coffee entries that do not exist in the grades/cupping scores and green analysis subset when they do within the coffee information:
 
-#### Grades/cupping scores
+##### Grades/cupping scores
 
 ```{r echo=FALSE, ref.label="ic_coffee_at_least_one_grades", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+ic_violation_ids_to_remove <- c(ic_violation_ids_to_remove, result$random_id)
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-#### Green analysis
+##### Green analysis
 
 ```{r echo=FALSE, ref.label="ic_coffee_at_least_one_greens", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+ic_violation_ids_to_remove <- c(ic_violation_ids_to_remove, result$random_id)
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-In this case we are missing an entry in both. It could mean that it still has not been added and/or reviewed. This entry would likely be removed from the data set.
+In this case we are missing an entry in both. It could mean that it still has not been added and/or reviewed. These entries will be removed from the data set.
 
-### Every coffee entry should have at most one set of grades/cupping scores and green analysis
+#### Every coffee entry should have at most one set of grades/cupping scores and green analysis
 
 In denial form, [we report all the integrity constraint violations](#ic_coffee_at_most_one) for coffee entries that have more than one entries for the grades/cupping scores or green analysis subset:
 
-#### Grades/cupping scores
+##### Grades/cupping scores
 
 ```{r echo=FALSE, ref.label="ic_coffee_at_most_one_grades", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-#### Green analysis:
+##### Green analysis
 
 ```{r echo=FALSE, ref.label="ic_coffee_at_most_one_greens", eval=TRUE}
 ```
 ```{r echo=FALSE, eval=TRUE}
-kable(result) %>% kable_styling(position = "center")
+kable(result) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 No issues were found.
@@ -298,21 +313,118 @@ No issues were found.
 dbDisconnect(connection)
 ```
 
-## Workflow
+```{r echo=FALSE, ref.label="read_clean_data", eval=TRUE, message=FALSE, warning=FALSE}
+```
 
-A [retrieve and clean workflow](#retrieve_and_clean_workflow) was designed using YesWorkflow[^6] and is provided as supplemental information as `workflow/coffee.yw`. Following are multiple visualization levels of it.
+```{r echo=FALSE, ref.label="setup_ic_violation_clean_data", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="remove_ic_violations", eval=TRUE}
+```
+
+```{r echo=FALSE, ref.label="save_final_clean_data", eval=TRUE}
+```
+
+\pagebreak
+
+## Data Cleaning Results
+
+In order to understand the above process and summarize the data cleaning results, diagrams and changes summaries per data file were constructed.
+
+### Conceptual workflows
+
+A [retrieve and clean workflow](#retrieve_and_clean_workflow) was manually created using YesWorkflow[^6] and is provided as supplemental information as `workflow/coffee.yw`. Following are multiple visualization levels of it.
+
+#### Overview diagram
 
 ![Level 0 - Retrieve and clean workflow](./workflow/png/00.png)
 
+\pagebreak
+
+#### Retrieve, save and normalize coffee data diagrams
+
 ![Level 1 - Retrieve, save and normalize coffee data](./workflow/png/1-1.png)
+
+\pagebreak
+
+#### Clean data with OpenRefine diagrams
 
 ![Level 1 - Clean data with OpenRefine](./workflow/png/1-2.png)
 
 ![Level 2 - Clean coffee information with OpenRefine](./workflow/png/1-2-1.png)
 
+\pagebreak
+
+#### Clean data with R diagrams
+
 ![Level 1 - Clean data with R](./workflow/png/1-3.png)
 
 ![Level 2 - Clean coffee informatino with R](./workflow/png/1-3-1.png)
+
+\pagebreak
+
+#### Clean constraint violations diagrams
+
+![Level 1 - Clean constraint violation](./workflow/png/1-4.png)
+
+\pagebreak
+
+### OpenRefine workflows
+
+Using `or2yw`[^7] three YesWorklow files (included in the supplemental information under the `workflow/openrefine/*.yw` directory) were [automatically generated](#create_openrefine_yesworkflows) for the data cleaning changes performed using OpenRefine. Following, the [corresponding diagrams](#create_openrefine_diagrams) (one per each data file) are included.
+
+\pagebreak
+
+#### Coffee information diagram
+
+![OpenRefine coffee information changes](./workflow/openrefine/png_small/coffees.png)
+
+\pagebreak
+
+#### Grades/Cupping scores diagram
+
+![OpenRefine grades/cupping scores changes](./workflow/openrefine/png_small/coffee_grades.png)
+
+\pagebreak
+
+#### Green analysis diagram
+
+![OpenRefine green analysis changes](./workflow/openrefine/png_small/coffee_greens.png)
+
+\pagebreak
+
+### Changes summary {#changes_summary}
+
+```{r echo=FALSE, ref.label="calculate_csv_diff_summaries", eval=TRUE, warning=FALSE}
+```
+
+Using `csvdiff`[^8], the changes performed at each stage can be [calculate](#calculate_csv_diff_summaries) per each file by the amount rows that were either removed, added and/or changed. Using this metric, we can summarize as follows.
+
+#### Coffee information
+
+```{r coffee_information_results_summary, echo=FALSE}
+kable(summaries[[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+#### Grades/Cupping scores
+
+```{r grading_cupping_scores_results_summary, echo=FALSE}
+kable(summaries[[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+#### Green analysis
+
+```{r green_analysis_results_summary, echo=FALSE}
+kable(summaries[[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+## Conclusions and Future Work
+
+From the [changes summary](#changes_summary), we can observe that we ended up modifying every single row corresponding to the coffee information using OpenRefine and R. On the other hand, very few modifications were performed on the grades/cupping scores and green analysis data files. This makes sense taking into consideration that the coffee information data contained many string entries while the grades/cupping scores contained primarily numeric values. Overall, the amount of changes with respect to the original data are substantial.
+
+One major problem encountered early on was eagerly updating new data from the source. Initially we ran the data retrieval process to acquire the data from the web site frequently (since it was fully automated) because we believed it changed infrequently. However, that was not the case and therefore it was hard to establish a data cleaning loop during development since we ended up having to compensate for the updates as well. For this reason we decided to take a snapshot of the data (including date/time) and work offline.
+
+With more time, we would have reached out to CQI and try to resolve someof the issues encountered in the data set. To start with, we assumed that it is possible to have a [completion date which is before their creation date](#content_ic_coffee_completion_date). This should be confirmed with them. Also, while all constraint violations were removed, some of these could have been fixed instead. Such is the case of [coffee greens total](#content_ic_coffee_greens_total) and [coffee greens defect](#content_ic_coffee_greens_defect). Finally, it would have been great to further clean the data to obtain the coordinates for the producers and have a better sense of location of the farms. Withit we could visually inspect the data in a more practical way.
 
 \pagebreak
 
@@ -519,6 +631,7 @@ greens <- read_csv(coffee_greens_clean_file_path)
 ```
 
 ```{r setup_and_open_database, echo=TRUE, eval=FALSE}
+ic_violation_ids_to_remove <- NULL
 database_path <- file.path(data_path, "database")
 dir.create(database_path, showWarnings = FALSE)
 database_file_path <- file.path(database_path, "coffee.db")
@@ -734,9 +847,182 @@ SELECT random_id
 result <- dbGetQuery(connection, query)
 ```
 
+### Setup final clean data without constaint violation entries {#setup_ic_violation_clean_data}
+
+```{r setup_ic_violation_clean_data, echo=TRUE, eval=FALSE}
+final_path <- file.path(data_path, "final")
+coffees_final_file_path <- file.path(final_path, "coffees.csv")
+coffee_grades_final_file_path <- file.path(final_path, "coffee_grades.csv")
+coffee_greens_final_file_path <- file.path(final_path, "coffee_greens.csv")
+dir.create(final_path, showWarnings = FALSE)
+```
+
+### Remove integrity constraint violation entries {#remove_ic_violations}
+
+```{r remove_ic_violations, echo=TRUE, eval=FALSE}
+coffees_final <- coffees[!(coffees$random_id %in% ic_violation_ids_to_remove),]
+grades_final <- grades[!(grades$random_id %in% ic_violation_ids_to_remove),]
+greens_final <- greens[!(greens$random_id %in% ic_violation_ids_to_remove),]
+```
+
+### Save final clean data {#save_final_clean_data}
+
+```{r save_final_clean_data, echo=TRUE, eval=FALSE}
+write_csv(coffees_final, coffees_final_file_path)
+write_csv(grades_final, coffee_grades_final_file_path)
+write_csv(greens_final, coffee_greens_final_file_path)
+rm(coffees_final)
+rm(grades_final)
+rm(greens_final)
+```
+
+
+### Create OpenRefine YesWorkflow's {#create_openrefine_yesworkflows}
+
+```{r create_openrefine_yesworkflows, echo=TRUE, eval=FALSE, warning=FALSE}
+full_file_path <- function (file_path) { file.path(getwd(), file_path) }
+
+or2yw_yw <- function (source_file_path, target_file_path) {
+  source <- file.path(getwd(), source_file_path)
+  target <- file.path(getwd(), target_file_path)
+  command <- paste0(
+    "or2yw -i \"",
+    source,
+    "\" -o \"",
+    target,
+    "\"")
+  result <- try(system(command, intern = TRUE))
+  result
+}
+
+openrefine_workflow_path <- "./workflow/openrefine"
+dir.create(openrefine_workflow_path, showWarnings = FALSE)
+recipe_names <- c(
+  "coffees_recipe.json",
+  "coffee_grades_recipe.json",
+  "coffee_greens_recipe.json")
+recipe_file_paths <- sapply(
+  recipe_names,
+  function (name, path) { file.path(path, name) },
+  openrefine_path)
+worfklow_names <- c("coffees.yw", "coffee_grades.yw", "coffee_greens.yw")
+worfklow_paths <- sapply(
+  worfklow_names,
+  function (name, path) { file.path(path, name) },
+  openrefine_workflow_path)
+result <- mapply(
+  function (source, target) { or2yw_yw(source, target) },
+  recipe_file_paths,
+  worfklow_paths)
+```
+
+### Create OpenRefine diagrams {#create_openrefine_diagrams}
+
+```{r create_openrefine_diagrams, echo=TRUE, eval=FALSE}
+or2yw_png <- function (source_file_path, target_file_path) {
+  source <- file.path(getwd(), source_file_path)
+  target <- file.path(getwd(), target_file_path)
+  target <- gsub(" ", "\ ", target)
+  command <- paste0(
+    "or2yw -i \"",
+    source,
+    "\" -o \"\\\"",
+    target,
+    "\\\"\" -ot png")
+  result <- try(system(command, intern = TRUE))
+  result
+}
+
+openrefine_workflow_image_path <- "./workflow/openrefine/png"
+dir.create(openrefine_workflow_image_path, showWarnings = FALSE)
+worfklow_image_names <- c("coffees.png", "coffee_grades.png", "coffee_greens.png")
+worfklow_image_paths <- sapply(
+  worfklow_image_names,
+  function (name, path) { file.path(path, name) },
+  openrefine_workflow_image_path)
+result <- mapply(
+  function (source, target) { or2yw_png(source, target) },
+  recipe_file_paths,
+  worfklow_image_paths)
+```
+
+### Calculate CSV difference summaries {#calculate_csv_diff_summaries}
+
+```{r calculate_csv_diff_summaries, echo=TRUE, eval=FALSE}
+create_file_path_pairs <- function (paths, file_names) {
+  lapply(file_names, function (file_name) {
+    file_paths <- sapply(paths, function (path, file) {
+      file_path <- file.path(path, file)
+      file_path
+    },
+    file_name)
+
+    file_path_pairs <- list()
+    file_paths_length <- length(file_paths)
+    if (file_paths_length > 1) {
+      for (index in 2:file_paths_length) {
+        source <- file_paths[index - 1]
+        target <- file_paths[index]
+        file_path_pairs[[index - 1]] <- list(source = source, target = target)
+      }
+    }
+    
+    file_path_pairs
+  })
+}
+
+csvdiff_summary <- function (source_file_path, target_file_path) {
+  source <- file.path(getwd(), source_file_path)
+  target <- file.path(getwd(), target_file_path)
+  command <- paste0(
+    "csvdiff --style=summary random_id \"",
+    source,
+    "\" \"",
+    target,
+    "\"")
+  result <- try(system(command, intern = TRUE))
+  result
+}
+
+paths <- c(download_path, openrefine_path, clean_path, final_path)
+file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
+file_path_pairs <- create_file_path_pairs(paths, file_names)
+
+summaries <- lapply(file_path_pairs, function (file_pairs) {
+  file_summaries <- lapply(file_pairs, function (pair) {
+    summary <- csvdiff_summary(pair$source, pair$target)
+    result <- NULL
+    if (length(summary) > 1) {
+      removed <- gsub("removed ", "", summary[1])
+      added <- gsub("added ", "", summary[2])
+      changed <- gsub("changed ", "", summary[3])
+      result <- data.frame(
+        Removed = removed,
+        Added = added,
+        Changed = changed,
+        stringsAsFactors = FALSE)
+    } else if (length(summary) == 1) {
+      result <- data.frame(
+        Removed = "0 rows (0.0%)",
+        Added = "0 rows (0.0%)",
+        Changed = "0 rows (0.0%)",
+        stringsAsFactors = FALSE)
+    }
+    
+    result
+  })
+  
+  df <- do.call(rbind, file_summaries)
+  rownames(df) <- c("OpenRefine", "R", "Constraints")
+  df
+})
+```
+
 [^1]: Coffee Quality Institute. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://www.coffeeinstitute.org/
 [^2]: Arabica Coffees - Q Coffee. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://database.coffeeinstitute.org/coffees/arabica
 [^3]: Coffea arabica. (2019, May 15). In *Wikipedia*, *The Free Encyclopedia*. Retrieved May 27, 2019 from https://en.wikipedia.org/wiki/Coffea_arabica
 [^4]: Robusta coffee. (2019, May 16). http://openrefine.org/http://openrefine.org/ Retrieved May 27, 2019 from https://en.wikipedia.org/wiki/Robusta_coffee
 [^5]: openrefine.github.com. In *OpenRefine*. Retrieved June 3, 2019 from http://openrefine.org/
 [^6]: YesWorkflow - GitHub. In *GitHub*. Retrieved June 6, 2019 from https://github.com/yesworkflow-org/
+[^7]: or2ywtool - PyPI. In *PyPI – the Python Package Index*. Retrieved July 17, 2019 from https://pypi.org/project/or2ywtool/
+[^8]: csvdiff - PyPI. In *PyPI – the Python Package Index*. Retrieved July 14, 2019 from https://pypi.org/project/csvdiff/

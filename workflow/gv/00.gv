@@ -23,6 +23,7 @@ node[shape=box style=filled fillcolor="#CCFFCC" peripheries=2 fontname=Helvetica
 retrieve_save_and_normalize [shape=record rankdir=LR label="{<f0> retrieve_save_and_normalize |<f1> Retrieve and normalize the data.}"];
 clean_data_with_openrefine [shape=record rankdir=LR label="{<f0> clean_data_with_openrefine |<f1> Clean data using OpenRefine.}"];
 clean_data_with_r [shape=record rankdir=LR label="{<f0> clean_data_with_r |<f1> Clean coffee information using R.}"];
+clean_data_constraint_violations [shape=record rankdir=LR label="{<f0> clean_data_constraint_violations |<f1> Clean relational schema constraint violations.}"];
 
 /* Style for nodes representing non-parameter data channels in workflow */
 node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
@@ -41,9 +42,14 @@ clean_path [shape=record rankdir=LR label="{<f0> clean_path |<f1> ./data/clean}"
 coffees_or_file_path [shape=record rankdir=LR label="{<f0> coffees_or_file_path |<f1> \{openrefine_data_path\}/coffees.csv}"];
 coffee_grades_or_file_path [shape=record rankdir=LR label="{<f0> coffee_grades_or_file_path |<f1> \{openrefine_data_path\}/coffee_grades.csv}"];
 coffee_greens_or_file_path [shape=record rankdir=LR label="{<f0> coffee_greens_or_file_path |<f1> \{openrefine_data_path\}/coffee_greens.csv}"];
+database_file_path [shape=record rankdir=LR label="{<f0> database_file_path |<f1> ./data/database/coffees.db}"];
+final_path [shape=record rankdir=LR label="{<f0> final_path |<f1> ./data/final}"];
 clean_coffees_file_path [shape=record rankdir=LR label="{<f0> clean_coffees_file_path |<f1> \{clean_path\}/coffees.csv}"];
 clean_coffee_grades_file_path [shape=record rankdir=LR label="{<f0> clean_coffee_grades_file_path |<f1> \{clean_path\}/coffee_grades.csv}"];
 clean_coffee_greens_file_path [shape=record rankdir=LR label="{<f0> clean_coffee_greens_file_path |<f1> \{clean_path\}/coffee_greens.csv}"];
+final_coffees_file_path [shape=record rankdir=LR label="{<f0> final_coffees_file_path |<f1> \{final_path\}/coffees.csv}"];
+final_coffee_grades_file_path [shape=record rankdir=LR label="{<f0> final_coffee_grades_file_path |<f1> \{final_path\}/coffee_grades.csv}"];
+final_coffee_greens_file_path [shape=record rankdir=LR label="{<f0> final_coffee_greens_file_path |<f1> \{final_path\}/coffee_greens.csv}"];
 
 /* Style for nodes representing parameter channels in workflow */
 node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
@@ -73,6 +79,14 @@ clean_path -> clean_data_with_r
 coffees_or_file_path -> clean_data_with_r
 coffee_grades_or_file_path -> clean_data_with_r
 coffee_greens_or_file_path -> clean_data_with_r
+clean_data_constraint_violations -> final_coffees_file_path
+clean_data_constraint_violations -> final_coffee_grades_file_path
+clean_data_constraint_violations -> final_coffee_greens_file_path
+database_file_path -> clean_data_constraint_violations
+final_path -> clean_data_constraint_violations
+clean_coffees_file_path -> clean_data_constraint_violations
+clean_coffee_grades_file_path -> clean_data_constraint_violations
+clean_coffee_greens_file_path -> clean_data_constraint_violations
 
 /* End of double cluster for drawing box around nodes in workflow */
 }}
@@ -88,14 +102,16 @@ coffee_info_length_input_port [label=""]
 download_path_input_port [label=""]
 openrefine_data_path_input_port [label=""]
 clean_path_input_port [label=""]
+database_file_path_input_port [label=""]
+final_path_input_port [label=""]
 
 /* Style for nodes representing workflow output ports */
 node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
 
 /* Nodes representing workflow output ports */
-clean_coffees_file_path_output_port [label=""]
-clean_coffee_grades_file_path_output_port [label=""]
-clean_coffee_greens_file_path_output_port [label=""]
+final_coffees_file_path_output_port [label=""]
+final_coffee_grades_file_path_output_port [label=""]
+final_coffee_greens_file_path_output_port [label=""]
 
 /* Edges from input ports to channels */
 coffee_info_url_input_port -> coffee_info_url
@@ -105,11 +121,13 @@ coffee_info_length_input_port -> coffee_info_length
 download_path_input_port -> download_path
 openrefine_data_path_input_port -> openrefine_data_path
 clean_path_input_port -> clean_path
+database_file_path_input_port -> database_file_path
+final_path_input_port -> final_path
 
 /* Edges from channels to output ports */
-clean_coffees_file_path -> clean_coffees_file_path_output_port
-clean_coffee_grades_file_path -> clean_coffee_grades_file_path_output_port
-clean_coffee_greens_file_path -> clean_coffee_greens_file_path_output_port
+final_coffees_file_path -> final_coffees_file_path_output_port
+final_coffee_grades_file_path -> final_coffee_grades_file_path_output_port
+final_coffee_greens_file_path -> final_coffee_greens_file_path_output_port
 
 /* End of top-level graph */
 }

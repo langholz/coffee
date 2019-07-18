@@ -5,7 +5,9 @@
 # @in coffee_info_length @desc The amount of coffees to retrieve.
 # @in download_path @uri ./data/download @desc The path to download the raw data to.
 # @in openrefine_data_path @uri ./data/openrefine @desc The path where the clean OpenRefine data is stored.
-# @in clean_path @uri ./data/clean @desc The path where the final clean data is stored.
+# @in clean_path @uri ./data/clean @desc The path where the clean R data is stored.
+# @in database_file_path @uri ./data/database/coffees.db @desc The file path to the coffees relational database.
+# @in final_path @uri ./data/final @desc The path where the final clean data is stored.
 
 ### Retrieve, save and normalize data
 
@@ -193,7 +195,7 @@
 ### Clean data with R
 
 # @begin clean_data_with_r @desc Clean coffee information using R.
-# @in clean_path @uri ./data/clean @desc The path where the final clean data is stored.
+# @in clean_path @uri ./data/clean @desc The path where the clean data is stored.
 # @in coffees_or_file_path @uri {openrefine_data_path}/coffees.csv
 # @in coffee_grades_or_file_path @uri {openrefine_data_path}/coffee_grades.csv
 # @in coffee_greens_or_file_path @uri {openrefine_data_path}/coffee_greens.csv
@@ -279,7 +281,68 @@
 # @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
 # @end clean_data_with_r
 
-# @out clean_coffees_file_path @uri {clean_path}/coffees.csv
-# @out clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
-# @out clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+### Clean constraint violations
+
+# @begin clean_data_constraint_violations @desc Clean relational schema constraint violations.
+# @in database_file_path @uri ./data/database/coffee.db The path where the relational database will be created.
+# @in final_path @uri ./data/final @desc The path where the final clean data is stored.
+# @in clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @in clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @in clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+
+# @begin read_clean_data @desc Read the cleaned data using R.
+# @in clean_coffees_file_path @uri {clean_path}/coffees.csv
+# @in clean_coffee_grades_file_path @uri {clean_path}/coffee_grades.csv
+# @in clean_coffee_greens_file_path @uri {clean_path}/coffee_greens.csv
+# @out coffees_clean
+# @out grades_clean
+# @out greens_clean
+# @end read_clean_data
+
+# @begin setup_and_open_database @desc Setup and open the database.
+# @in database_file_path @uri ./data/database/coffee.db The path where the relational database will be created.
+# @out connection_open
+# @end setup_and_open_database
+
+# @begin write_database_data @desc Write the data to the database.
+# @in connection_open
+# @in coffees_clean
+# @in grades_clean
+# @in greens_clean
+# @out connection_write
+# @end write_database_data
+
+# @begin identify_constraint_violations @desc Identify the constraint violations.
+# @in connection_write
+# @out ic_violation_ids_to_remove
+# @end identify_constraint_violations
+
+# @begin clean_ic_violations @desc Clean data with constraint violations.
+# @in ic_violation_ids_to_remove
+# @in coffees_clean
+# @in grades_clean
+# @in greens_clean
+# @out coffees_final
+# @out grades_final
+# @out greens_final
+# @end clean_ic_violations
+
+# @begin save_final_clean_data @desc Save final clean data.
+# @in final_path @uri ./data/final @desc The path where the final clean data is stored.
+# @in coffees_final
+# @in grades_final
+# @in greens_final
+# @out final_coffees_file_path @uri {final_path}/coffees.csv
+# @out final_coffee_grades_file_path @uri {final_path}/coffee_grades.csv
+# @out final_coffee_greens_file_path @uri {final_path}/coffee_greens.csv
+# @end save_final_clean_data
+
+# @out final_coffees_file_path @uri {final_path}/coffees.csv
+# @out final_coffee_grades_file_path @uri {final_path}/coffee_grades.csv
+# @out final_coffee_greens_file_path @uri {final_path}/coffee_greens.csv
+# @end clean_data_constraint_violations
+
+# @out final_coffees_file_path @uri {final_path}/coffees.csv
+# @out final_coffee_grades_file_path @uri {final_path}/coffee_grades.csv
+# @out final_coffee_greens_file_path @uri {final_path}/coffee_greens.csv
 # @end retrieve_and_clean_coffee_data

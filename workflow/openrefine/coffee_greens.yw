@@ -1,0 +1,188 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:parchment
+#@param col-name:partial_black
+#@param col-name:broken
+#@param col-name:floater
+#@param col-name:withered
+#@param col-name:partial_sour
+#@param expression:value.toNumber()
+#@param col-name:full_black
+#@param col-name:random_id
+#@param col-name:slight_insect
+#@param col-name:quakers
+#@param col-name:shell
+#@param col-name:fungus
+#@param col-name:foreign_matter
+#@param col-name:severe_insect
+#@param col-name:pass
+#@param col-name:category_one_equivalent
+#@param col-name:dried_cherry
+#@param col-name:color
+#@param col-name:immature
+#@param col-name:agtron
+#@param col-name:category_one_total
+#@param col-name:hull
+#@param col-name:category_two_total
+#@param col-name:moisture
+#@param col-name:full_sour
+#@param expression:null
+#@param col-name:category_two_equivalent
+#@in table0
+#@out table26
+#@begin core/text-transform0#@desc Text transform on cells in column full_black using expression value.toNumber()
+#@param col-name:full_black
+#@param expression:value.toNumber()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column full_sour using expression value.toNumber()
+#@param col-name:full_sour
+#@param expression:value.toNumber()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column dried_cherry using expression value.toNumber()
+#@param col-name:dried_cherry
+#@param expression:value.toNumber()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column fungus using expression value.toNumber()
+#@param col-name:fungus
+#@param expression:value.toNumber()
+#@in table3
+#@out table4
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column severe_insect using expression value.toNumber()
+#@param col-name:severe_insect
+#@param expression:value.toNumber()
+#@in table4
+#@out table5
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column foreign_matter using expression value.toNumber()
+#@param col-name:foreign_matter
+#@param expression:value.toNumber()
+#@in table5
+#@out table6
+#@end core/text-transform5
+#@begin core/text-transform6#@desc Text transform on cells in column partial_black using expression value.toNumber()
+#@param col-name:partial_black
+#@param expression:value.toNumber()
+#@in table6
+#@out table7
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column partial_sour using expression value.toNumber()
+#@param col-name:partial_sour
+#@param expression:value.toNumber()
+#@in table7
+#@out table8
+#@end core/text-transform7
+#@begin core/text-transform8#@desc Text transform on cells in column parchment using expression value.toNumber()
+#@param col-name:parchment
+#@param expression:value.toNumber()
+#@in table8
+#@out table9
+#@end core/text-transform8
+#@begin core/text-transform9#@desc Text transform on cells in column floater using expression value.toNumber()
+#@param col-name:floater
+#@param expression:value.toNumber()
+#@in table9
+#@out table10
+#@end core/text-transform9
+#@begin core/text-transform10#@desc Text transform on cells in column immature using expression value.toNumber()
+#@param col-name:immature
+#@param expression:value.toNumber()
+#@in table10
+#@out table11
+#@end core/text-transform10
+#@begin core/text-transform11#@desc Text transform on cells in column withered using expression value.toNumber()
+#@param col-name:withered
+#@param expression:value.toNumber()
+#@in table11
+#@out table12
+#@end core/text-transform11
+#@begin core/text-transform12#@desc Text transform on cells in column shell using expression value.toNumber()
+#@param col-name:shell
+#@param expression:value.toNumber()
+#@in table12
+#@out table13
+#@end core/text-transform12
+#@begin core/text-transform13#@desc Text transform on cells in column broken using expression value.toNumber()
+#@param col-name:broken
+#@param expression:value.toNumber()
+#@in table13
+#@out table14
+#@end core/text-transform13
+#@begin core/text-transform14#@desc Text transform on cells in column hull using expression value.toNumber()
+#@param col-name:hull
+#@param expression:value.toNumber()
+#@in table14
+#@out table15
+#@end core/text-transform14
+#@begin core/text-transform15#@desc Text transform on cells in column slight_insect using expression value.toNumber()
+#@param col-name:slight_insect
+#@param expression:value.toNumber()
+#@in table15
+#@out table16
+#@end core/text-transform15
+#@begin core/text-transform16#@desc Text transform on cells in column moisture using expression value.toNumber()
+#@param col-name:moisture
+#@param expression:value.toNumber()
+#@in table16
+#@out table17
+#@end core/text-transform16
+#@begin core/text-transform17#@desc Text transform on cells in column color using expression value.toNumber()
+#@param col-name:color
+#@param expression:value.toNumber()
+#@in table17
+#@out table18
+#@end core/text-transform17
+#@begin core/text-transform18#@desc Text transform on cells in column agtron using expression value.toNumber()
+#@param col-name:agtron
+#@param expression:value.toNumber()
+#@in table18
+#@out table19
+#@end core/text-transform18
+#@begin core/text-transform19#@desc Text transform on cells in column quakers using expression value.toNumber()
+#@param col-name:quakers
+#@param expression:value.toNumber()
+#@in table19
+#@out table20
+#@end core/text-transform19
+#@begin core/text-transform20#@desc Text transform on cells in column category_one_total using expression value.toNumber()
+#@param col-name:category_one_total
+#@param expression:value.toNumber()
+#@in table20
+#@out table21
+#@end core/text-transform20
+#@begin core/text-transform21#@desc Text transform on cells in column category_two_total using expression value.toNumber()
+#@param col-name:category_two_total
+#@param expression:value.toNumber()
+#@in table21
+#@out table22
+#@end core/text-transform21
+#@begin core/text-transform22#@desc Text transform on cells in column category_one_equivalent using expression value.toNumber()
+#@param col-name:category_one_equivalent
+#@param expression:value.toNumber()
+#@in table22
+#@out table23
+#@end core/text-transform22
+#@begin core/text-transform23#@desc Text transform on cells in column category_two_equivalent using expression value.toNumber()
+#@param col-name:category_two_equivalent
+#@param expression:value.toNumber()
+#@in table23
+#@out table24
+#@end core/text-transform23
+#@begin core/text-transform24#@desc Text transform on cells in column pass using expression null
+#@param col-name:pass
+#@param expression:null
+#@in table24
+#@out table25
+#@end core/text-transform24
+#@begin core/text-transform25#@desc Text transform on cells in column random_id using expression value.toNumber()
+#@param col-name:random_id
+#@param expression:value.toNumber()
+#@in table25
+#@out table26
+#@end core/text-transform25
+#@end Linear_OR

@@ -1,0 +1,103 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:acidity
+#@param col-name:body
+#@param col-name:pass
+#@param expression:value.toNumber()
+#@param col-name:after
+#@param col-name:overall
+#@param col-name:total
+#@param col-name:clean
+#@param col-name:sweet
+#@param col-name:random_id
+#@param col-name:mouthfeel
+#@param col-name:flavor
+#@param col-name:aroma
+#@param col-name:balance
+#@param col-name:uniformity
+#@in table0
+#@out table14
+#@begin core/text-transform0#@desc Text transform on cells in column aroma using expression value.toNumber()
+#@param col-name:aroma
+#@param expression:value.toNumber()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column flavor using expression value.toNumber()
+#@param col-name:flavor
+#@param expression:value.toNumber()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column after using expression value.toNumber()
+#@param col-name:after
+#@param expression:value.toNumber()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column acidity using expression value.toNumber()
+#@param col-name:acidity
+#@param expression:value.toNumber()
+#@in table3
+#@out table4
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column body using expression value.toNumber()
+#@param col-name:body
+#@param expression:value.toNumber()
+#@in table4
+#@out table5
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column mouthfeel using expression value.toNumber()
+#@param col-name:mouthfeel
+#@param expression:value.toNumber()
+#@in table5
+#@out table6
+#@end core/text-transform5
+#@begin core/text-transform6#@desc Text transform on cells in column balance using expression value.toNumber()
+#@param col-name:balance
+#@param expression:value.toNumber()
+#@in table6
+#@out table7
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column uniformity using expression value.toNumber()
+#@param col-name:uniformity
+#@param expression:value.toNumber()
+#@in table7
+#@out table8
+#@end core/text-transform7
+#@begin core/text-transform8#@desc Text transform on cells in column clean using expression value.toNumber()
+#@param col-name:clean
+#@param expression:value.toNumber()
+#@in table8
+#@out table9
+#@end core/text-transform8
+#@begin core/text-transform9#@desc Text transform on cells in column sweet using expression value.toNumber()
+#@param col-name:sweet
+#@param expression:value.toNumber()
+#@in table9
+#@out table10
+#@end core/text-transform9
+#@begin core/text-transform10#@desc Text transform on cells in column overall using expression value.toNumber()
+#@param col-name:overall
+#@param expression:value.toNumber()
+#@in table10
+#@out table11
+#@end core/text-transform10
+#@begin core/text-transform11#@desc Text transform on cells in column total using expression value.toNumber()
+#@param col-name:total
+#@param expression:value.toNumber()
+#@in table11
+#@out table12
+#@end core/text-transform11
+#@begin core/text-transform12#@desc Text transform on cells in column pass using expression value.toNumber()
+#@param col-name:pass
+#@param expression:value.toNumber()
+#@in table12
+#@out table13
+#@end core/text-transform12
+#@begin core/text-transform13#@desc Text transform on cells in column random_id using expression value.toNumber()
+#@param col-name:random_id
+#@param expression:value.toNumber()
+#@in table13
+#@out table14
+#@end core/text-transform13
+#@end Linear_OR
