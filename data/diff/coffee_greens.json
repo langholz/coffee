@@ -1,0 +1,38 @@
+{
+  "_index": [
+    "random_id"
+  ],
+  "added": [],
+  "changed": [],
+  "removed": [
+    {
+      "agtron": "0",
+      "broken": "242",
+      "category_one_equivalent": "7",
+      "category_one_total": "23",
+      "category_two_equivalent": "36",
+      "category_two_total": "196",
+      "color": "8",
+      "color_title": "Green",
+      "dried_cherry": "0",
+      "floater": "24",
+      "foreign_matter": "0",
+      "full_black": "2",
+      "full_sour": "0",
+      "fungus": "6",
+      "hull": "0",
+      "immature": "72",
+      "moisture": "28",
+      "parchment": "0",
+      "partial_black": "8",
+      "partial_sour": "6",
+      "pass": "FALSE",
+      "quakers": "44",
+      "random_id": "995923",
+      "severe_insect": "38",
+      "shell": "0",
+      "slight_insect": "36",
+      "withered": "4"
+    }
+  ]
+}

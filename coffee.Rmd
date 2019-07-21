@@ -398,25 +398,42 @@ Using `or2yw`[^7] three YesWorklow files (included in the supplemental informati
 ```{r echo=FALSE, ref.label="calculate_csv_diff_summaries", eval=TRUE, warning=FALSE}
 ```
 
-Using `csvdiff`[^8], the changes performed at each stage can be [calculate](#calculate_csv_diff_summaries) per each file by the amount rows that were either removed, added and/or changed. Using this metric, we can summarize as follows.
+Using `csvdiff`[^8], the changes performed in total and at each stage can be calculated per each file by the amount rows that were either removed, added and/or changed.
 
-#### Coffee information
+#### By type and stages
+
+The changes by type and stages can be [summarized](#calculate_csv_diff_summaries) with the following tables.
+
+##### Coffee information
 
 ```{r coffee_information_results_summary, echo=FALSE}
 kable(summaries[[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-#### Grades/Cupping scores
+##### Grades/Cupping scores
 
 ```{r grading_cupping_scores_results_summary, echo=FALSE}
 kable(summaries[[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
-#### Green analysis
+##### Green analysis
 
 ```{r green_analysis_results_summary, echo=FALSE}
 kable(summaries[[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
+
+#### Totals
+
+```{r echo=FALSE, ref.label="calculate_total_csv_diff_summaries", eval=TRUE, warning=FALSE}
+```
+
+The total changes between when the data was first downloaded and the final data cleaning changes can then be [summarized](#calculate_total_csv_diff_summaries) as follows:
+
+```{r total_results_summary, echo=FALSE}
+kable(total_summaries_df) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+The difference files were also [calculated](#calculate_total_csv_diff_files) and are stored in the supplemental information under the `data/diff` directory.
 
 ## Conclusions and Future Work
 
@@ -1017,6 +1034,101 @@ summaries <- lapply(file_path_pairs, function (file_pairs) {
   df
 })
 ```
+
+### Calculate total CSV difference summaries {#calculate_total_csv_diff_summaries}
+
+```{r calculate_total_csv_diff_summaries, echo=TRUE, eval=FALSE}
+paths <- c(download_path, final_path)
+file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
+file_path_pairs <- create_file_path_pairs(paths, file_names)
+
+total_summaries <- lapply(file_path_pairs, function (file_pair) {
+  pair <- file_pair[[1]]
+  summary <- csvdiff_summary(pair$source, pair$target)
+  result <- NULL
+  if (length(summary) > 1) {
+    removed <- gsub("removed ", "", summary[1])
+    added <- gsub("added ", "", summary[2])
+    changed <- gsub("changed ", "", summary[3])
+    result <- data.frame(
+      Removed = removed,
+      Added = added,
+      Changed = changed,
+      stringsAsFactors = FALSE)
+  } else if (length(summary) == 1) {
+    result <- data.frame(
+      Removed = "0 rows (0.0%)",
+      Added = "0 rows (0.0%)",
+      Changed = "0 rows (0.0%)",
+      stringsAsFactors = FALSE)
+  }
+})
+
+total_summaries_df <- do.call(rbind, total_summaries)
+rownames(total_summaries_df) <- c(
+  "Coffee information",
+  "Grades/Cupping scores",
+  "Green analysis")
+```
+
+### Create total CSV difference files {#calculate_total_csv_diff_files}
+
+```{r calculate_total_csv_diff_files, echo=TRUE, eval=FALSE}
+csvdiff <- function (source_file_path, target_file_path, output_file_path) {
+  source <- file.path(getwd(), source_file_path)
+  target <- file.path(getwd(), target_file_path)
+  output <- file.path(getwd(), output_file_path)
+  command <- paste0(
+    "csvdiff --style=pretty --output=\"",
+    output,
+    "\" random_id \"",
+    source,
+    "\" \"",
+    target,
+    "\"")
+  result <- try(system(command, intern = TRUE))
+  result
+}
+
+diff_path <- file.path(data_path, "diff")
+dir.create(diff_path, showWarnings = FALSE)
+
+paths <- c(download_path, final_path)
+file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
+file_path_pairs <- create_file_path_pairs(paths, file_names)
+diff_file_names <- sapply(
+  file_names,
+  function (file_name) { gsub(".csv", ".json", file_name) })
+diff_file_paths <- sapply(
+  diff_file_names,
+  function (file_name) { file.path(diff_path, file_name) })
+
+diffs <- mapply(function (file_pair, output_file) {
+  pair <- file_pair[[1]]
+  summary <- csvdiff(pair$source, pair$target, output_file)
+  result <- NULL
+  if (length(summary) > 1) {
+    removed <- gsub("removed ", "", summary[1])
+    added <- gsub("added ", "", summary[2])
+    changed <- gsub("changed ", "", summary[3])
+    result <- data.frame(
+      Removed = removed,
+      Added = added,
+      Changed = changed,
+      stringsAsFactors = FALSE)
+  } else if (length(summary) == 1) {
+    result <- data.frame(
+      Removed = "0 rows (0.0%)",
+      Added = "0 rows (0.0%)",
+      Changed = "0 rows (0.0%)",
+      stringsAsFactors = FALSE)
+  }
+},
+file_path_pairs,
+diff_file_paths)
+
+```
+
 
 [^1]: Coffee Quality Institute. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://www.coffeeinstitute.org/
 [^2]: Arabica Coffees - Q Coffee. In *Coffee Quality Institute*. Retrieved May 27, 2019 from https://database.coffeeinstitute.org/coffees/arabica

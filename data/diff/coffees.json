@@ -1,0 +1,6486 @@
+{
+  "_index": [
+    "random_id"
+  ],
+  "added": [],
+  "changed": [
+    {
+      "fields": {
+        "altitude": {
+          "from": "4700",
+          "to": "1432.5600000000002"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Feb 22nd, 2019",
+          "to": "2019-02-22T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "saurab bantwal",
+          "to": "Saurab Bantwal"
+        },
+        "created_desc": {
+          "from": "Jan 31st, 2019",
+          "to": "2019-01-31T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "KARNATAKA",
+          "to": "Karnataka"
+        },
+        "state": {
+          "from": "CA",
+          "to": "California"
+        }
+      },
+      "key": [
+        "104828"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "105627"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Santa Rosa de Copan",
+          "to": "Santa Rosa De Copan"
+        },
+        "company": {
+          "from": "Coffee planet Corporation S.A",
+          "to": "Coffee Planet Corporation S.A."
+        },
+        "completed_desc": {
+          "from": "Jul 4th, 2018",
+          "to": "2018-07-04T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Nov 24th, 2018",
+          "to": "2018-11-24T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": " Los Limos",
+          "to": "Los Limos"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "84.00",
+          "to": "84"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "cortado, despulpado y secado",
+          "to": "Cortado, Despulpado Y Secado"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "111259"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Sepanjang, Taman,  Sidoarjo",
+          "to": "Sepanjang, Taman, Sidoarjo"
+        },
+        "company": {
+          "from": "PT Rajawali Artha Agro Sejahtera (PTRAAS)",
+          "to": "Pt Rajawali Artha Agro Sejahtera (ptraas)"
+        },
+        "completed_desc": {
+          "from": "May 3rd, 2019",
+          "to": "2019-05-03T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "created_desc": {
+          "from": "Apr 16th, 2019",
+          "to": "2019-04-16T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "PT. RAAS",
+          "to": "Pt. Raas"
+        },
+        "region": {
+          "from": "sumatra mandheling",
+          "to": "Sumatra Mandheling"
+        }
+      },
+      "key": [
+        "111630"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "completed_desc": {
+          "from": "Sep 13th, 2018",
+          "to": "2018-09-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "RAFAEL AMARAL",
+          "to": "Rafael Amaral"
+        },
+        "created_desc": {
+          "from": "Sep 11th, 2018",
+          "to": "2018-09-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "name": {
+          "from": "RAFAEL AMARAL",
+          "to": "Rafael Amaral"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "region": {
+          "from": "SUL DE MINAS",
+          "to": "Sul De Minas"
+        }
+      },
+      "key": [
+        "113540"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A. C.",
+          "to": "Centro Agroecol\u00f3gico Del Caf\u00e9 A. C."
+        },
+        "completed_desc": {
+          "from": "Jun 29th, 2018",
+          "to": "2018-06-29T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CAFES TOMARI SA DE CV",
+          "to": "Cafes Tomari Sa De Cv"
+        },
+        "created_desc": {
+          "from": "Jun 29th, 2018",
+          "to": "2018-06-29T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "LA FORTALEZA",
+          "to": "La Fortaleza"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C. ",
+          "to": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C."
+        },
+        "mill": {
+          "from": "CAFES TOMARI",
+          "to": "Cafes Tomari"
+        },
+        "name": {
+          "from": "Cafecol AC",
+          "to": "Cafecol Ac"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "CAFES TOMARI",
+          "to": "Cafes Tomari"
+        }
+      },
+      "key": [
+        "123877"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 25th, 2018",
+          "to": "2018-06-25T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "127616"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "ED&F Man Volcafe Brasil Ltda.",
+          "to": "Ed&f Man Volcafe Brasil Ltda."
+        },
+        "completed_desc": {
+          "from": "Aug 23rd, 2018",
+          "to": "2018-08-23T00:00:00Z"
+        },
+        "country_title": {
+          "from": "NA",
+          "to": "Brazil"
+        },
+        "created_desc": {
+          "from": "Oct 5th, 2018",
+          "to": "2018-10-05T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "S\u00c3O RAFAEL",
+          "to": "S\u00e3o Rafael"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "COPAG",
+          "to": "Copag"
+        },
+        "name": {
+          "from": "ED&F Man Volcafe Brasil Ltda.",
+          "to": "Ed&f Man Volcafe Brasil Ltda."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "LUIZ AUGUSTO PEREIRA MONGUILOD",
+          "to": "Luiz Augusto Pereira Monguilod"
+        },
+        "region": {
+          "from": "Monte Carmelo, Cerrado de Minas Gerais",
+          "to": "Monte Carmelo, Cerrado Mineiro"
+        }
+      },
+      "key": [
+        "138073"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 6th, 2019",
+          "to": "2019-05-06T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "created_desc": {
+          "from": "Apr 2nd, 2019",
+          "to": "2019-04-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "\u738b\u4e2d\u548c (Wang, Zhong-He) ",
+          "to": "\u738b\u4e2d\u548c (wang, Zhong-he)"
+        },
+        "region": {
+          "from": "\u53f0\u5357\u5e02\u6771\u5c71\u5340( Dongshan Dist., Tainan City)",
+          "to": "\u53f0\u5357\u5e02\u6771\u5c71\u5340 (Dongshan Dist., Tainan City)"
+        }
+      },
+      "key": [
+        "144448"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "5 AVENIDA 13-09 APTO.102 EDIFICIO FORTIN LAS CONCHAS ZONA 14 ",
+          "to": "5 AVENIDA 13-09 APTO.102 EDIFICIO FORTIN LAS CONCHAS ZONA 14"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "SIEMBRA VISI\u00d3N,S.A.",
+          "to": "Siembra Visi\u00f3n, S.A."
+        },
+        "completed_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA MEDINA Y ANEXO ",
+          "to": "Finca Medina Y Anexo"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BENEFICIO MEDINA ",
+          "to": "Beneficio Medina"
+        },
+        "name": {
+          "from": "SIEMBRA VISI\u00d3N,S.A.",
+          "to": "Siembra Visi\u00f3n,s.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "SIEMBRA VISI\u00d3N,S.A.",
+          "to": "Siembra Visi\u00f3n, S.A."
+        },
+        "region": {
+          "from": "ANTIGUA ",
+          "to": "Antigua"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "144686"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "1,500~2,000",
+          "to": "1750"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "ECOM Japan Ltd.",
+          "to": "Ecom Japan Ltd."
+        },
+        "completed_desc": {
+          "from": "Aug 16th, 2018",
+          "to": "2018-08-16T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "ECOM Japan Limited ",
+          "to": "Ecom Japan Limited"
+        },
+        "created_desc": {
+          "from": "Jul 31st, 2018",
+          "to": "2018-07-31T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "83.00",
+          "to": "83"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Japan Coffee Exchange ",
+          "to": "Japan Coffee Exchange"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "149549"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Kawacom uganda LTD",
+          "to": "Kawacom Uganda Ltd"
+        },
+        "completed_desc": {
+          "from": "Mar 18th, 2019",
+          "to": "2019-03-18T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Kawacom Uganda LTD",
+          "to": "Kawacom Uganda Ltd"
+        },
+        "created_desc": {
+          "from": "Mar 18th, 2019",
+          "to": "2019-03-18T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "name": {
+          "from": "Kawacom Uganda LTD",
+          "to": "Kawacom Uganda Ltd"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "161473"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "EXPORTCAFE,S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "completed_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA LA BURBUJA ",
+          "to": "Finca La Burbuja"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "BENEFICIO AGUA SANTA ",
+          "to": "Beneficio Agua Santa"
+        },
+        "name": {
+          "from": "EXPORTCAFE,S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "MARISA JUDITH HERRERA VILLATORO ",
+          "to": "Marisa Judith Herrera Villatoro"
+        },
+        "region": {
+          "from": "HUEHUETENANGO ",
+          "to": "Huehuetenango"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "183097"
+      ]
+    },
+    {
+      "fields": {
+        "company": {
+          "from": "GEO GREEN VISION LLC",
+          "to": "Geo Green Vision Llc"
+        },
+        "completed_desc": {
+          "from": "Oct 8th, 2018",
+          "to": "2018-10-08T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Sep 21st, 2018",
+          "to": "2018-09-21T00:00:00Z"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Sebastiao Brinate",
+          "to": "Sebasti\u00e3o Brinate"
+        }
+      },
+      "key": [
+        "219240"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "UNEX (GUATEMALA),S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "completed_desc": {
+          "from": "Apr 15th, 2019",
+          "to": "2019-04-15T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Apr 15th, 2019",
+          "to": "2019-04-15T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FInca Beneficio El Torreon ",
+          "to": "Finca Beneficio El Torreon"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Ixchel ",
+          "to": "Beneficio Ixchel"
+        },
+        "name": {
+          "from": "UNEX (GUATEMALA),S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Agroindustrias Cafetaleras ",
+          "to": "Agroindustrias Cafetaleras"
+        },
+        "region": {
+          "from": "ORIENTE",
+          "to": "Oriente"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "232197"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Carmo de Minas",
+          "to": "Carmo De Minas"
+        },
+        "completed_desc": {
+          "from": "Aug 2nd, 2018",
+          "to": "2018-08-02T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Aug 1st, 2018",
+          "to": "2018-08-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "241911"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "cafebras com\u00e9rcio de cafes do brasil",
+          "to": "Cafebras Com\u00e9rcio De Cafes Do Brasil"
+        },
+        "completed_desc": {
+          "from": "Nov 1st, 2018",
+          "to": "2018-11-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Oct 23rd, 2018",
+          "to": "2018-10-23T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "cafebras",
+          "to": "Cafebras"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Jo\u00e3o Jarduli",
+          "to": "Jo\u00e3o Batista Jarduli"
+        },
+        "region": {
+          "from": "cerrado Mineiro",
+          "to": "Cerrado Mineiro"
+        },
+        "state": {
+          "from": "MG",
+          "to": "Minas Gerais"
+        }
+      },
+      "key": [
+        "250901"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "Bole ",
+          "to": "Bole"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Aug 13th, 2018",
+          "to": "2018-08-13T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Aug 6th, 2018",
+          "to": "2018-08-06T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Small Growers ",
+          "to": "Small Growers"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Legu Trading Plc ",
+          "to": "Legu Trading Plc"
+        },
+        "region": {
+          "from": "Yirgacheffe ",
+          "to": "Yirgacheffe"
+        }
+      },
+      "key": [
+        "257179"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "260390"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 2nd, 2019",
+          "to": "2019-05-02T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Apr 11th, 2019",
+          "to": "2019-04-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "269388"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "SAN PEDRO SULA",
+          "to": "San Pedro Sula"
+        },
+        "company": {
+          "from": "CIGRAH",
+          "to": "Cigrah"
+        },
+        "completed_desc": {
+          "from": "Jun 30th, 2018",
+          "to": "2018-06-30T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Jun 23rd, 2018",
+          "to": "2018-06-23T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "DRY MILL",
+          "to": "Dry Mill"
+        },
+        "name": {
+          "from": "Catacion CIGRAH",
+          "to": "Catacion Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "CORTES",
+          "to": "Cortes"
+        }
+      },
+      "key": [
+        "272937"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "1697",
+          "to": "517.2456000000001"
+        },
+        "completed_desc": {
+          "from": "Dec 14th, 2018",
+          "to": "2018-12-14T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Peris wanjiku",
+          "to": "Peris Wanjiku"
+        },
+        "created_desc": {
+          "from": "Dec 10th, 2018",
+          "to": "2018-12-10T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "82.00",
+          "to": "82"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "origin_title": {
+          "from": "Tanzania, United Republic Of",
+          "to": "United Republic of Tanzania"
+        }
+      },
+      "key": [
+        "277119"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Sepanjang, Taman,  Sidoarjo",
+          "to": "Sepanjang, Taman, Sidoarjo"
+        },
+        "company": {
+          "from": "PT Rajawali Artha Agro Sejahtera (PTRAAS)",
+          "to": "Pt Rajawali Artha Agro Sejahtera (ptraas)"
+        },
+        "completed_desc": {
+          "from": "May 27th, 2019",
+          "to": "2019-05-27T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "created_desc": {
+          "from": "May 13th, 2019",
+          "to": "2019-05-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "PT. RAAS",
+          "to": "Pt. Raas"
+        },
+        "region": {
+          "from": "sumatra mandheling",
+          "to": "Sumatra Mandheling"
+        }
+      },
+      "key": [
+        "277426"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "completed_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "created_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Los Ausoles ",
+          "to": "Los Ausoles"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Sociedad Cooperativa Los Ausoles de R.L. ",
+          "to": "Sociedad Cooperativa Los Ausoles De R.L."
+        },
+        "name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Sociedad Cooperativa Los Ausoles de R.L. ",
+          "to": "Sociedad Cooperativa Los Ausoles De R.L."
+        },
+        "region": {
+          "from": "Apaneca - Ilamatepec",
+          "to": "Apaneca-Llamatepec"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "283126"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "291333"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Sepanjang, Taman,  Sidoarjo",
+          "to": "Sepanjang, Taman, Sidoarjo"
+        },
+        "company": {
+          "from": "PT Rajawali Artha Agro Sejahtera (PTRAAS)",
+          "to": "Pt Rajawali Artha Agro Sejahtera (ptraas)"
+        },
+        "completed_desc": {
+          "from": "Apr 1st, 2019",
+          "to": "2019-04-01T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "created_desc": {
+          "from": "Mar 23rd, 2019",
+          "to": "2019-03-23T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "84.50",
+          "to": "84.5"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "Pondokbaru, bener meriah",
+          "to": "Pondokbaru, Bener Meriah"
+        },
+        "name": {
+          "from": "PTRAAS",
+          "to": "Ptraas"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "PT.RAAS",
+          "to": "Pt. Raas"
+        },
+        "region": {
+          "from": "Sumatera Mandheling Gr.1",
+          "to": "Sumatra Mandheling"
+        }
+      },
+      "key": [
+        "303706"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Taipei city",
+          "to": "Taipei City"
+        },
+        "completed_desc": {
+          "from": "Mar 13th, 2019",
+          "to": "2019-03-13T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jan 15th, 2019",
+          "to": "2019-01-15T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "mill": {
+          "from": "Dry Mill ",
+          "to": "Dry Mill"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Yeh,Li Chuan",
+          "to": "Yeh,li Chuan"
+        }
+      },
+      "key": [
+        "305997"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "CARCAFE",
+          "to": "Carcafe"
+        },
+        "completed_desc": {
+          "from": "Nov 9th, 2018",
+          "to": "2018-11-09T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "created_desc": {
+          "from": "Nov 7th, 2018",
+          "to": "2018-11-07T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Rodrigo Amaya ",
+          "to": "Rodrigo Amaya"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "FRANKLIN DUSSAA",
+          "to": "Franklin Dussaa"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "314583"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "KM. 25.5 CARRETERA A EL SALVADOR, FRAIJANES ",
+          "to": "KM. 25.5 CARRETERA A EL SALVADOR, FRAIJANES"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "FRAIJANES, SANTA ROSA ",
+          "to": "Fraijanes, Santa Rosa"
+        },
+        "company": {
+          "from": "INMOBILIARIA E INVERSIONES DOS MIL,S.A.",
+          "to": "Inmobiliaria E Inversiones Dos Mil, S.A."
+        },
+        "completed_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "SANTA ROSA ",
+          "to": "Santa Rosa"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "BENEFICIO 2000",
+          "to": "Beneficio 2000"
+        },
+        "name": {
+          "from": "INMOBILIARIA E INVERSIONES DOS MIL,S.A.",
+          "to": "Inmobiliaria E Inversiones Dos Mil, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "SAN JOSE LAS VICTORIAS ",
+          "to": "San Jose Las Victorias"
+        },
+        "region": {
+          "from": "SANTA ROSA ",
+          "to": "Santa Rosa"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "315089"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Unex (Guatemala), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "completed_desc": {
+          "from": "Jul 10th, 2018",
+          "to": "2018-07-10T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 10th, 2018",
+          "to": "2018-07-10T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "81.50",
+          "to": "81.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Unex (Guatemala), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "321600"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Montes de Oca",
+          "to": "Montes De Oca"
+        },
+        "company": {
+          "from": "CECA,S.A.",
+          "to": "Ceca, S.A."
+        },
+        "completed_desc": {
+          "from": "Jun 6th, 2018",
+          "to": "2018-06-06T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "created_desc": {
+          "from": "May 17th, 2018",
+          "to": "2018-05-17T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Monta\u00f1as del Diamante",
+          "to": "Beneficio Monta\u00f1as Del Diamante"
+        },
+        "name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Martin Gutierrez",
+          "to": "Mart\u00edn Gutierrez"
+        }
+      },
+      "key": [
+        "324816"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Montes de Oca",
+          "to": "Montes De Oca"
+        },
+        "company": {
+          "from": "CECA,S.A.",
+          "to": "Ceca, S.A."
+        },
+        "completed_desc": {
+          "from": "Apr 26th, 2019",
+          "to": "2019-04-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "created_desc": {
+          "from": "Apr 23rd, 2019",
+          "to": "2019-04-23T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Monta\u00f1as del Diamante",
+          "to": "Beneficio Monta\u00f1as Del Diamante"
+        },
+        "name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Martin Gutierrez",
+          "to": "Mart\u00edn Gutierrez"
+        },
+        "region": {
+          "from": "TARRAZU",
+          "to": "Tarrazu"
+        }
+      },
+      "key": [
+        "340359"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        },
+        "company": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "completed_desc": {
+          "from": "Jun 21st, 2018",
+          "to": "2018-06-21T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "created_desc": {
+          "from": "May 10th, 2018",
+          "to": "2018-05-10T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "83.50",
+          "to": "83.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "344617"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "BOURBON SPECIALTY COFFEES S/A",
+          "to": "Bourbon Specialty Coffees S/A"
+        },
+        "completed_desc": {
+          "from": "Oct 3rd, 2018",
+          "to": "2018-10-03T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Sep 20th, 2018",
+          "to": "2018-09-20T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "BOURBON SPECIALTY COFFEES S/A",
+          "to": "Bourbon Specialty Coffees S/A"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "MG",
+          "to": "Minas Gerais"
+        }
+      },
+      "key": [
+        "352156"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 7th, 2019",
+          "to": "2019-05-07T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "created_desc": {
+          "from": "Apr 2nd, 2019",
+          "to": "2019-04-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "\u5927\u92e4\u82b1\u9593 \uff08Dachu Coffee Estate)",
+          "to": "\u5927\u92e4\u82b1\u9593 \uff08dachu Coffee Estate)"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "84.00",
+          "to": "84"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "mill": {
+          "from": "\u5927\u92e4\u82b1\u9593 \uff08Dachu Coffee Estate)",
+          "to": "\u5927\u92e4\u82b1\u9593 \uff08dachu Coffee Estate)"
+        },
+        "name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "\u90ed\u96c5\u8070 \uff08KUO,YA-TSUNG\uff09",
+          "to": "\u90ed\u96c5\u8070 \uff08kuo,ya-tsung\uff09"
+        },
+        "region": {
+          "from": "\u53f0\u5357\u5e02\u6771\u5c71\u5340( Dongshan Dist., Tainan City)",
+          "to": "\u53f0\u5357\u5e02\u6771\u5c71\u5340 (Dongshan Dist., Tainan City)"
+        }
+      },
+      "key": [
+        "364359"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "EXPORTCAFE,S.A",
+          "to": "Exportcafe, S.A."
+        },
+        "completed_desc": {
+          "from": "May 15th, 2019",
+          "to": "2019-05-15T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 15th, 2019",
+          "to": "2019-05-15T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA LA BURBUJA ",
+          "to": "Finca La Burbuja"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BENEFICIO AGUA SANTA ",
+          "to": "Beneficio Agua Santa"
+        },
+        "name": {
+          "from": "EXPORTCAFE,S.A",
+          "to": "Exportcafe, S.A"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "MARISA JUDITH HERRERA VILLATORO ",
+          "to": "Marisa Judith Herrera Villatoro"
+        },
+        "region": {
+          "from": "HUEHUETENANGO",
+          "to": "Huehuetenango"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "364810"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "BOGOTA, DC",
+          "to": "Bogot\u00e1"
+        },
+        "company": {
+          "from": "carcafe ltda",
+          "to": "Carcafe Ltda"
+        },
+        "completed_desc": {
+          "from": "Mar 21st, 2019",
+          "to": "2019-03-21T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "created_desc": {
+          "from": "Mar 13th, 2019",
+          "to": "2019-03-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "EL PRADO",
+          "to": "El Prado"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "86.00",
+          "to": "86"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "NEIVA",
+          "to": "Neiva"
+        },
+        "name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "FRANKLIN DUSSAN",
+          "to": "Franklin Dussan"
+        },
+        "region": {
+          "from": "HUILA",
+          "to": "Huila"
+        },
+        "state": {
+          "from": "BO",
+          "to": "Bogot\u00e1"
+        }
+      },
+      "key": [
+        "365352"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Taipei city",
+          "to": "Taipei City"
+        },
+        "completed_desc": {
+          "from": "Mar 7th, 2019",
+          "to": "2019-03-07T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jan 15th, 2019",
+          "to": "2019-01-15T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "mill": {
+          "from": "Dry Mill ",
+          "to": "Dry Mill"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Yeh,Li Chuan",
+          "to": "Yeh,li Chuan"
+        }
+      },
+      "key": [
+        "386861"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "BOGOTA, DC",
+          "to": "Bogot\u00e1"
+        },
+        "company": {
+          "from": "carcafe ltda",
+          "to": "Carcafe Ltda"
+        },
+        "completed_desc": {
+          "from": "Apr 13th, 2019",
+          "to": "2019-04-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "created_desc": {
+          "from": "Apr 3rd, 2019",
+          "to": "2019-04-03T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "EL RAIZAL LA IBERIA",
+          "to": "El Raizal La Iberia"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "CARTAGO",
+          "to": "Cartago"
+        },
+        "name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "ARVEY GARCIA",
+          "to": "Arvey Garcia"
+        },
+        "region": {
+          "from": "ARGELIA -VALLE DEL CAUCA",
+          "to": "Argelia-Valle Del Cauca"
+        },
+        "state": {
+          "from": "BO",
+          "to": "Bogot\u00e1"
+        }
+      },
+      "key": [
+        "398999"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "83.00",
+          "to": "83"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "401052"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "completed_desc": {
+          "from": "Sep 11th, 2018",
+          "to": "2018-09-11T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "RAFAEL AMARAL",
+          "to": "Rafael Amaral"
+        },
+        "created_desc": {
+          "from": "Sep 5th, 2018",
+          "to": "2018-09-05T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "name": {
+          "from": "RAFAEL AMARAL",
+          "to": "Rafael Amaral"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "SUCAFINA BRASIL",
+          "to": "Sucafina Brasil"
+        },
+        "region": {
+          "from": "SUL DE MINAS",
+          "to": "Sul De Minas"
+        }
+      },
+      "key": [
+        "409853"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "SUBE S.A.",
+          "to": "Sube S.A."
+        },
+        "completed_desc": {
+          "from": "Aug 2nd, 2018",
+          "to": "2018-08-02T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Aug 2nd, 2018",
+          "to": "2018-08-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "ARCO IRIS",
+          "to": "Arco Iris"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "N/A",
+          "to": "None"
+        },
+        "name": {
+          "from": "SUBE S.A.",
+          "to": "Sube S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "FLAVIO R. OVALLE P.M. DEL CARMEN OVALLE P. Y CESAR A. OVALLE P., COPROPIEDAD",
+          "to": "Flavio R. Ovalle P.M. Del Carmen Ovalle P. Y Cesar A. Ovalle P., Copropiedad"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "422987"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "UNEX (GUATEMALA), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "completed_desc": {
+          "from": "Jun 14th, 2018",
+          "to": "2018-06-14T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jun 14th, 2018",
+          "to": "2018-06-14T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA BENEFICIO EL TORREON",
+          "to": "Finca Beneficio El Torreon"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "81.00",
+          "to": "81"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BENEFICIO IXCHEL",
+          "to": "Beneficio Ixchel"
+        },
+        "name": {
+          "from": "UNEX (GUATEMALA), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "AGROINDUSTRIAS CAFETALERAS ",
+          "to": "Agroindustrias Cafetaleras"
+        },
+        "region": {
+          "from": "ORIENTE",
+          "to": "Oriente"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "427045"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "cafebras com\u00e9rcio de cafes do brasil",
+          "to": "Cafebras Com\u00e9rcio De Cafes Do Brasil"
+        },
+        "completed_desc": {
+          "from": "Dec 7th, 2018",
+          "to": "2018-12-07T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Nov 28th, 2018",
+          "to": "2018-11-28T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "CAFEBRAS COM\u00c9RCIO DE CAF\u00c9 BRASIL S/A",
+          "to": "Cafebras Com\u00e9rcio De Caf\u00e9 Brasil S/A"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "84.00",
+          "to": "84"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "DRY MIL",
+          "to": "Dry Mill"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "jo\u00e3o batista jarduli",
+          "to": "Jo\u00e3o Batista Jarduli"
+        },
+        "region": {
+          "from": "cerrado",
+          "to": "Cerrado"
+        },
+        "state": {
+          "from": "MG",
+          "to": "Minas Gerais"
+        }
+      },
+      "key": [
+        "430999"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "CIGRAH",
+          "to": "Cigrah"
+        },
+        "completed_desc": {
+          "from": "Aug 7th, 2018",
+          "to": "2018-08-07T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Jul 9th, 2018",
+          "to": "2018-07-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "80.50",
+          "to": "80.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "CIGRAH",
+          "to": "Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "467156"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "1450",
+          "to": "441.96000000000004"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "POLA S.A.",
+          "to": "Pola S.A."
+        },
+        "completed_desc": {
+          "from": "Jul 3rd, 2018",
+          "to": "2018-07-03T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 3rd, 2018",
+          "to": "2018-07-03T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA AURORA",
+          "to": "Finca Aurora"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "FINCA AURORA",
+          "to": "Finca Aurora"
+        },
+        "name": {
+          "from": "POLA S.A.",
+          "to": "Pola S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "ALDO ANNESE",
+          "to": "Aldo Annese"
+        },
+        "region": {
+          "from": "COBAN",
+          "to": "Coban"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "484203"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Carmo de Minas",
+          "to": "Carmo De Minas"
+        },
+        "completed_desc": {
+          "from": "Jul 30th, 2018",
+          "to": "2018-07-30T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 20th, 2018",
+          "to": "2018-07-20T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Cafeco ",
+          "to": "Cafeco"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "Carmo de Minas",
+          "to": "Carmo De Minas"
+        }
+      },
+      "key": [
+        "505381"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "region": {
+          "from": "SIDAMO GUJI",
+          "to": "Sidamo Guji"
+        },
+        "state": {
+          "from": "CHINA",
+          "to": "China"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "532954"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Jul 31st, 2018",
+          "to": "2018-07-31T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 9th, 2018",
+          "to": "2018-07-09T00:00:00Z"
+        },
+        "farm": {
+          "from": "Collected from several small farmers ",
+          "to": "Collected From Several Small Farmers"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "Jl. Ikhlas, Bromo Ujung  No.3 B, Medan",
+          "to": "Jl. Ikhlas, Bromo Ujung No.3 B, Medan"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Collected from several small farmers ",
+          "to": "Collected From Several Small Farmers"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "541925"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "ED&F Man Volcafe Brasil Ltda",
+          "to": "Ed&f Man Volcafe Brasil Ltda."
+        },
+        "completed_desc": {
+          "from": "Feb 12th, 2019",
+          "to": "2019-02-12T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Feb 21st, 2019",
+          "to": "2019-02-21T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "TURMALINA ",
+          "to": "Turmalina"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "ED&F Man Volcafe Brasil Ltda",
+          "to": "Ed&f Man Volcafe Brasil Ltda."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Jos\u00e9 de Alencar Branco Urtado ",
+          "to": "Jos\u00e9 De Alencar Branco Urtado"
+        },
+        "region": {
+          "from": "Monte Carmelo - Cerrado Mineiro",
+          "to": "Monte Carmelo, Cerrado Mineiro"
+        }
+      },
+      "key": [
+        "565006"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "Km. 25.5 Carretera a El Salvador, Fraijanes ",
+          "to": "Km. 25.5 Carretera a El Salvador, Fraijanes"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Inmobiliaria e Inversiones Dos Mil, S.A. ",
+          "to": "Inmobiliaria E Inversiones Dos Mil, S.A."
+        },
+        "completed_desc": {
+          "from": "Sep 11th, 2018",
+          "to": "2018-09-11T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Sep 11th, 2018",
+          "to": "2018-09-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "SANTA ROSA",
+          "to": "Santa Rosa"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BENEFICIO 2000",
+          "to": "Beneficio 2000"
+        },
+        "name": {
+          "from": "Inmobiliaria e Inversiones Dos Mil, S.A.",
+          "to": "Inmobiliaria E Inversiones Dos Mil, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "SANTA LEONARDA",
+          "to": "Santa Leonarda"
+        },
+        "region": {
+          "from": "SANTA ROSA",
+          "to": "Santa Rosa"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "566207"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "581863"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Montes de Oca",
+          "to": "Montes De Oca"
+        },
+        "company": {
+          "from": "CECA,S.A.",
+          "to": "Ceca, S.A."
+        },
+        "completed_desc": {
+          "from": "Apr 13th, 2019",
+          "to": "2019-04-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "created_desc": {
+          "from": "Apr 3rd, 2019",
+          "to": "2019-04-03T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Monta\u00f1as del Diamante",
+          "to": "Beneficio Monta\u00f1as Del Diamante"
+        },
+        "name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Martin Gutierrez",
+          "to": "Mart\u00edn Gutierrez"
+        }
+      },
+      "key": [
+        "587807"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "81.00",
+          "to": "81"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "608582"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 13th, 2019",
+          "to": "2019-05-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "created_desc": {
+          "from": "Apr 2nd, 2019",
+          "to": "2019-04-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "\u5d01\u982d\u5c71\u5496\u5561\u9928 (Kan Tou Mountain Coffee)",
+          "to": "\u5d01\u982d\u5c71\u5496\u5561\u9928 (kan Tou Mountain Coffee)"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "mill": {
+          "from": "\u5d01\u982d\u5c71\u5496\u5561\u9928 (Kan Tou Mountain Coffee)",
+          "to": "\u5d01\u982d\u5c71\u5496\u5561\u9928 (kan Tou Mountain Coffee)"
+        },
+        "name": {
+          "from": "Lin, Che-Hao Krude \u6797\u54f2\u8c6a",
+          "to": "Lin, Che-hao Krude \u6797\u54f2\u8c6a"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "\u53f0\u5357\u5e02\u6771\u5c71\u5340( Dongshan Dist., Tainan City)",
+          "to": "\u53f0\u5357\u5e02\u6771\u5c71\u5340 (Dongshan Dist., Tainan City)"
+        }
+      },
+      "key": [
+        "609320"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Vero Ethos Ventures Private Ltd ",
+          "to": "Vero Ethos Ventures Private Ltd"
+        },
+        "completed_desc": {
+          "from": "Jul 31st, 2018",
+          "to": "2018-07-31T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 17th, 2018",
+          "to": "2018-07-17T00:00:00Z"
+        },
+        "farm": {
+          "from": "From several small holder farmers",
+          "to": "From Several Small Holder Farmers"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "Wamena ",
+          "to": "Wamena"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Small holder famers",
+          "to": "Small Holder Famers"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "620277"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "No.89, Wenxian Rd.,  ",
+          "to": "No.89, Wenxian Rd.,"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jun 19th, 2018",
+          "to": "2018-06-19T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "81.50",
+          "to": "81.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "622529"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "639411"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 6th, 2019",
+          "to": "2019-05-06T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Amy VanNocker",
+          "to": "Amy Vannocker"
+        },
+        "created_desc": {
+          "from": "Apr 11th, 2019",
+          "to": "2019-04-11T00:00:00Z"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "82.00",
+          "to": "82"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Specialty Coffee Association ",
+          "to": "Specialty Coffee Association"
+        },
+        "name": {
+          "from": "Amy VanNocker",
+          "to": "Amy Vannocker"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "662635"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Montes de Oca",
+          "to": "Montes De Oca"
+        },
+        "company": {
+          "from": "CECA,S.A.",
+          "to": "Ceca, S.A."
+        },
+        "completed_desc": {
+          "from": "Jun 6th, 2018",
+          "to": "2018-06-06T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "created_desc": {
+          "from": "May 17th, 2018",
+          "to": "2018-05-17T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Monta\u00f1as del Diamante",
+          "to": "Beneficio Monta\u00f1as Del Diamante"
+        },
+        "name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Martin Gutierrez",
+          "to": "Mart\u00edn Gutierrez"
+        }
+      },
+      "key": [
+        "674386"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "UNEX (GUATEMALA), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "completed_desc": {
+          "from": "Jun 21st, 2018",
+          "to": "2018-06-21T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jun 20th, 2018",
+          "to": "2018-06-20T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA BENEFICIO EL TORREON",
+          "to": "Finca Beneficio El Torreon"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "BENEFICIO IXCHEL",
+          "to": "Beneficio Ixchel"
+        },
+        "name": {
+          "from": "UNEX (GUATEMALA), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "AGROINDUSTRIAS CAFETALERAS ",
+          "to": "Agroindustrias Cafetaleras"
+        },
+        "region": {
+          "from": "ORIENTE",
+          "to": "Oriente"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "676419"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Molinos de Honduras",
+          "to": "Molinos De Honduras"
+        },
+        "completed_desc": {
+          "from": "Mar 8th, 2019",
+          "to": "2019-03-08T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Mar 8th, 2019",
+          "to": "2019-03-08T00:00:00Z"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "Molinos de Honduras",
+          "to": "Molinos De Honduras"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "681680"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        },
+        "company": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "completed_desc": {
+          "from": "May 20th, 2019",
+          "to": "2019-05-20T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "created_desc": {
+          "from": "May 16th, 2019",
+          "to": "2019-05-16T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "84.00",
+          "to": "84"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        }
+      },
+      "key": [
+        "692398"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "Itochu",
+          "to": "ITOCHU"
+        },
+        "company": {
+          "from": "Kenyacof",
+          "to": "Kenyacof Limited"
+        },
+        "completed_desc": {
+          "from": "Jan 15th, 2019",
+          "to": "2019-01-15T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Peris wanjiku",
+          "to": "Peris Wanjiku"
+        },
+        "created_desc": {
+          "from": "Jan 11th, 2019",
+          "to": "2019-01-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "83.50",
+          "to": "83.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Peris wanjiku",
+          "to": "Peris Wanjiku"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "origin_title": {
+          "from": "Tanzania, United Republic Of",
+          "to": "United Republic of Tanzania"
+        }
+      },
+      "key": [
+        "696176"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Jan 28th, 2019",
+          "to": "2019-01-28T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Feb 9th, 2019",
+          "to": "2019-02-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Las Promesas de Sam Blas",
+          "to": "Las Promesas De Sam Blas"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "lavado",
+          "to": "Lavado"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Gonzalo Castillo Moreno ",
+          "to": "Gonzalo Castillo Moreno"
+        }
+      },
+      "key": [
+        "696491"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Bogota",
+          "to": "Bogot\u00e1"
+        },
+        "company": {
+          "from": "Sucafina Colombia SAS",
+          "to": "Sucafina Colombia Sas"
+        },
+        "completed_desc": {
+          "from": "Jan 17th, 2019",
+          "to": "2019-01-17T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Sucafina Colombia SAS",
+          "to": "Sucafina Colombia Sas"
+        },
+        "created_desc": {
+          "from": "Jan 8th, 2019",
+          "to": "2019-01-08T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "N.A",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "N.A",
+          "to": "None"
+        },
+        "name": {
+          "from": "Sucafina Colombia SAS",
+          "to": "Sucafina Colombia Sas"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "N.A",
+          "to": "None"
+        },
+        "state": {
+          "from": "Bogota",
+          "to": "Bogot\u00e1"
+        }
+      },
+      "key": [
+        "716707"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "completed_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "created_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Shasta ",
+          "to": "Shasta"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "82.50",
+          "to": "82.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Uni\u00f3n de Exportadores, S.A. de C.V. ",
+          "to": "Uni\u00f3n De Exportadores, S.A. De C.V."
+        },
+        "name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Uni\u00f3n de Exportadores, S.A. de C.V. ",
+          "to": "Uni\u00f3n De Exportadores, S.A. De C.V."
+        },
+        "region": {
+          "from": "Apaneca - Ilamatepec",
+          "to": "Apaneca-Llamatepec"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "719175"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "completed_desc": {
+          "from": "Apr 12th, 2019",
+          "to": "2019-04-12T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "created_desc": {
+          "from": "Apr 12th, 2019",
+          "to": "2019-04-12T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Los Ausoles ",
+          "to": "Los Ausoles"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "Sociedad Cooperativa de Cafetaleros Los Ausoles de R.L. ",
+          "to": "Sociedad Cooperativa De Cafetaleros Los Ausoles De R.L."
+        },
+        "name": {
+          "from": "Consejo Salvadore\u00f1o del Caf\u00e9",
+          "to": "Consejo Salvadore\u00f1o Del Caf\u00e9"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Sociedad Cooperativa de Cafetaleros Los Ausoles de R.L. ",
+          "to": "Sociedad Cooperativa De Cafetaleros Los Ausoles De R.L."
+        },
+        "region": {
+          "from": "Apaneca - Ilamatepec",
+          "to": "Apaneca-Llamatepec"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "727944"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A. C.",
+          "to": "Centro Agroecol\u00f3gico Del Caf\u00e9 A. C."
+        },
+        "completed_desc": {
+          "from": "Jun 13th, 2018",
+          "to": "2018-06-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CAFES TOMARI SA DE CV",
+          "to": "Cafes Tomari Sa De Cv"
+        },
+        "created_desc": {
+          "from": "Jun 13th, 2018",
+          "to": "2018-06-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "LA FORTALEZA",
+          "to": "La Fortaleza"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C. ",
+          "to": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C."
+        },
+        "mill": {
+          "from": "CAFES TOMARI",
+          "to": "Cafes Tomari"
+        },
+        "name": {
+          "from": "Cafecol AC",
+          "to": "Cafecol Ac"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "CAFES TOMARI",
+          "to": "Cafes Tomari"
+        },
+        "region": {
+          "from": "VERACRUZ",
+          "to": "Veracruz"
+        }
+      },
+      "key": [
+        "754562"
+      ]
+    },
+    {
+      "fields": {
+        "completed_desc": {
+          "from": "Feb 14th, 2019",
+          "to": "2019-02-14T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Sep 26th, 2018",
+          "to": "2018-09-26T00:00:00Z"
+        },
+        "farm": {
+          "from": "MUKABI MARY -DS- 18-18",
+          "to": "Mukabi Mary -ds- 18-18"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "HULLING FACILITY",
+          "to": "Hulling Facility"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "KYAGALANYI COFFEE LIMITED",
+          "to": "Kyagalanyi Coffee Limited"
+        },
+        "region": {
+          "from": "EASTERN UAGNDA",
+          "to": "Eastern Uagnda"
+        }
+      },
+      "key": [
+        "754945"
+      ]
+    },
+    {
+      "fields": {
+        "company": {
+          "from": "BUCAFE",
+          "to": "Bucafe"
+        },
+        "completed_desc": {
+          "from": "Sep 13th, 2018",
+          "to": "2018-09-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Monia MARIMBU",
+          "to": "Monia Marimbu"
+        },
+        "created_desc": {
+          "from": "Sep 12th, 2018",
+          "to": "2018-09-12T00:00:00Z"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Monia MARIMBU",
+          "to": "Monia Marimbu"
+        },
+        "region": {
+          "from": "NGOZI",
+          "to": "Ngozi"
+        }
+      },
+      "key": [
+        "756661"
+      ]
+    },
+    {
+      "fields": {
+        "company": {
+          "from": "BUCAFE",
+          "to": "Bucafe"
+        },
+        "completed_desc": {
+          "from": "Sep 13th, 2018",
+          "to": "2018-09-13T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Monia MARIMBU",
+          "to": "Monia Marimbu"
+        },
+        "created_desc": {
+          "from": "Sep 12th, 2018",
+          "to": "2018-09-12T00:00:00Z"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BUDECA",
+          "to": "Budeca"
+        },
+        "name": {
+          "from": "Monia MARIMBU",
+          "to": "Monia Marimbu"
+        },
+        "region": {
+          "from": "NGOZI",
+          "to": "Ngozi"
+        }
+      },
+      "key": [
+        "758485"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "NYERI",
+          "to": "Nyeri"
+        },
+        "completed_desc": {
+          "from": "Mar 20th, 2019",
+          "to": "2019-03-20T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Mar 11th, 2019",
+          "to": "2019-03-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "NKG MILLS",
+          "to": "Nkg Mills"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "NYERI",
+          "to": "Nyeri"
+        },
+        "state": {
+          "from": "KENYA",
+          "to": "Kenya"
+        }
+      },
+      "key": [
+        "759816"
+      ]
+    },
+    {
+      "fields": {
+        "city": {
+          "from": "CIUDAD DE M\u00c9XICO",
+          "to": "Ciudad De M\u00e9xico"
+        },
+        "company": {
+          "from": "AGROINDUSTRIAS UNIDAS DE MEXICO SA DE CV",
+          "to": "Agroindustrias Unidas De Mexico S.A. de C.V."
+        },
+        "completed_desc": {
+          "from": "Mar 16th, 2019",
+          "to": "2019-03-16T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 21st, 2019",
+          "to": "2019-05-21T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "NO DOES NOT APPLY",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C. ",
+          "to": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C."
+        },
+        "producer": {
+          "from": "CUARTA UNION DE PRODUCTORES",
+          "to": "Cuarta Union De Productores"
+        },
+        "region": {
+          "from": "JALTENANGO, CHIAPAS",
+          "to": "Jaltenango, Chiapas"
+        }
+      },
+      "key": [
+        "761203"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "EXPORTCAFE, S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "completed_desc": {
+          "from": "May 29th, 2018",
+          "to": "2018-05-29T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 28th, 2018",
+          "to": "2018-05-28T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA ALTA LUZ",
+          "to": "Finca Alta Luz"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "N/A",
+          "to": "None"
+        },
+        "name": {
+          "from": "EXPORTCAFE, S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "MARIA DE LOS ANGELES PEREZ",
+          "to": "Maria De Los Angeles Perez"
+        },
+        "region": {
+          "from": "HUEHUETENANGO",
+          "to": "Huehuetenango"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "768342"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "768955"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "ECOM Japan Limited",
+          "to": "Ecom Japan Ltd."
+        },
+        "completed_desc": {
+          "from": "Sep 14th, 2018",
+          "to": "2018-09-14T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "ECOM Japan Limited ",
+          "to": "Ecom Japan Limited"
+        },
+        "created_desc": {
+          "from": "Aug 30th, 2018",
+          "to": "2018-08-30T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "name": {
+          "from": "ECOM Japan Limited ",
+          "to": "Ecom Japan Limited"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "768984"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 25th, 2018",
+          "to": "2018-06-25T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "790329"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        },
+        "company": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "completed_desc": {
+          "from": "May 7th, 2019",
+          "to": "2019-05-07T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "created_desc": {
+          "from": "May 6th, 2019",
+          "to": "2019-05-06T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "name": {
+          "from": "COMERCIAL INTERNACIONAL EXPORTADORA, S.A.",
+          "to": "Comercial Internacional Exportadora, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "MANAGUA",
+          "to": "Managua"
+        }
+      },
+      "key": [
+        "791248"
+      ]
+    },
+    {
+      "fields": {
+        "city": {
+          "from": "san pedro sula",
+          "to": "San Pedro Sula"
+        },
+        "company": {
+          "from": "Bon cafe s.a",
+          "to": "Bon Cafe S.A."
+        },
+        "completed_desc": {
+          "from": "Sep 3rd, 2018",
+          "to": "2018-09-03T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Marco tulio fuentes lobo",
+          "to": "Marco Tulio Fuentes Lobo"
+        },
+        "created_desc": {
+          "from": "Aug 30th, 2018",
+          "to": "2018-08-30T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "LA GUAMA",
+          "to": "La Guama"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "BON CAFE S.A.",
+          "to": "Bon Cafe S.A."
+        },
+        "name": {
+          "from": "Marco tulio fuentes lobo",
+          "to": "Marco Tulio Fuentes Lobo"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "NAHUN EDGARDO FLORES",
+          "to": "Nahun Edgardo Flores"
+        },
+        "region": {
+          "from": "la paz",
+          "to": "La Paz"
+        },
+        "state": {
+          "from": "cortes",
+          "to": "Cortes"
+        },
+        "weight": {
+          "from": "69",
+          "to": "31.297848"
+        }
+      },
+      "key": [
+        "795473"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "SAN PEDRO SULA",
+          "to": "San Pedro Sula"
+        },
+        "company": {
+          "from": "CIGRAH",
+          "to": "Cigrah"
+        },
+        "completed_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "LA MISION",
+          "to": "La Mision"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "DRY MILL",
+          "to": "Dry Mill"
+        },
+        "name": {
+          "from": "Catacion CIGRAH",
+          "to": "Catacion Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "HUMBERTO LOPEZ",
+          "to": "Humberto Lopez"
+        },
+        "region": {
+          "from": "SANTA ROSA",
+          "to": "Santa Rosa"
+        },
+        "state": {
+          "from": "CORTES",
+          "to": "Cortes"
+        }
+      },
+      "key": [
+        "807582"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 26th, 2018",
+          "to": "2018-06-26T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "816803"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Mar 11th, 2019",
+          "to": "2019-03-11T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Mar 8th, 2019",
+          "to": "2019-03-08T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "822842"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "VERACRUZ",
+          "to": "Veracruz"
+        },
+        "completed_desc": {
+          "from": "May 1st, 2019",
+          "to": "2019-05-01T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "ANDREAS KUSSMAUL",
+          "to": "Andreas Kussmaul"
+        },
+        "created_desc": {
+          "from": "Apr 26th, 2019",
+          "to": "2019-04-26T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "icp_title": {
+          "from": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C. ",
+          "to": "Centro Agroecol\u00f3gico del Caf\u00e9 A.C."
+        },
+        "name": {
+          "from": "ANDREAS KUSSMAUL",
+          "to": "Andreas Kussmaul"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "Chiapas ",
+          "to": "Chiapas"
+        },
+        "state": {
+          "from": "VERACRUZ",
+          "to": "Veracruz"
+        }
+      },
+      "key": [
+        "827493"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 20th, 2019",
+          "to": "2019-05-20T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 13th, 2019",
+          "to": "2019-05-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "BCU",
+          "to": "Bcu"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "Eastern ",
+          "to": "Eastern"
+        },
+        "state": {
+          "from": "kampala",
+          "to": "Kampala"
+        }
+      },
+      "key": [
+        "829143"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Jul 31st, 2018",
+          "to": "2018-07-31T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jul 9th, 2018",
+          "to": "2018-07-09T00:00:00Z"
+        },
+        "farm": {
+          "from": "PERKEBUNAN KOPI RANTEKARUA ",
+          "to": "Perkebunan Kopi Rantekarua"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "PINHALENSE",
+          "to": "Pinhalense"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "PT SULOTCO JAYA ABADI",
+          "to": "Pt Sulotco Jaya Abadi"
+        },
+        "region": {
+          "from": "DESA BOLOKAN, KEC BITTUANG, TANA TORAJA",
+          "to": "Desa Bolokan, Kec Bittuang, Tana Toraja"
+        },
+        "state": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "832675"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "May 2nd, 2019",
+          "to": "2019-05-02T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "created_desc": {
+          "from": "Apr 11th, 2019",
+          "to": "2019-04-11T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Juan Manuel Catacion CIGRAH",
+          "to": "Juan Manuel Catacion Cigrah"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "836835"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 25th, 2018",
+          "to": "2018-06-25T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jun 29th, 2018",
+          "to": "2018-06-29T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "856523"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "SANTOS",
+          "to": "Santos"
+        },
+        "completed_desc": {
+          "from": "Oct 31st, 2018",
+          "to": "2018-10-31T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "Pedro Santos e Silva",
+          "to": "Pedro Santos E Silva"
+        },
+        "created_desc": {
+          "from": "Jan 16th, 2019",
+          "to": "2019-01-16T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": " 002/1145/0162",
+          "to": "002/1145/0162"
+        },
+        "name": {
+          "from": "Pedro Santos e Silva",
+          "to": "Pedro Santos E Silva"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "Carmo de Minas",
+          "to": "Carmo De Minas"
+        }
+      },
+      "key": [
+        "858333"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "MEDAN",
+          "to": "Medan"
+        },
+        "company": {
+          "from": "PT. ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt. Royal Pacific Indah International"
+        },
+        "completed_desc": {
+          "from": "May 28th, 2018",
+          "to": "2018-05-28T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "PT.ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt.Royal Pacific Indah International"
+        },
+        "created_desc": {
+          "from": "May 24th, 2018",
+          "to": "2018-05-24T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "ELMAN",
+          "to": "Elman"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "78.50",
+          "to": "78.5"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "DRY MILL OR HULLING FACILITY",
+          "to": "Dry Mill Or Hulling Facility"
+        },
+        "name": {
+          "from": "PT.ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt.Royal Pacific Indah International"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "ANTON GAYO",
+          "to": "Anton Gayo"
+        },
+        "region": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "SUNGGAL",
+          "to": "Sunggal"
+        }
+      },
+      "key": [
+        "875590"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Jan 10th, 2019",
+          "to": "2019-01-10T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 13th, 2018",
+          "to": "2018-12-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Sebasti\u00e3o V B Brinate",
+          "to": "Sebasti\u00e3o Brinate"
+        },
+        "region": {
+          "from": "Capara\u00f3/Matas de Minas",
+          "to": "Capara\u00f3/matas De Minas"
+        }
+      },
+      "key": [
+        "877680"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "ECOM JAPAN, LTD.",
+          "to": "ECOM JAPAN LTD"
+        },
+        "completed_desc": {
+          "from": "Apr 9th, 2019",
+          "to": "2019-04-09T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CAFETALERA INTERNACIONAL CAFINTER, S.A.",
+          "to": "Cafetalera Internacional Cafinter, S.A."
+        },
+        "created_desc": {
+          "from": "Mar 21st, 2019",
+          "to": "2019-03-21T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "VARIOS (DIFERENCIADO C)",
+          "to": "Varios (diferenciado C)"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "F.J . ORLICH & HNOS, LTDA.",
+          "to": "F.J. Orlich & Hnos, Ltda."
+        },
+        "name": {
+          "from": "CAFETALERA INTERNACIONAL CAFINTER, S.A.",
+          "to": "Cafetalera Internacional Cafinter, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "VARIOS",
+          "to": "Varios"
+        },
+        "region": {
+          "from": "WEST VALLEY",
+          "to": "West Valley"
+        }
+      },
+      "key": [
+        "891574"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "completed_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Dec 1st, 2018",
+          "to": "2018-12-01T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "name": {
+          "from": "CQI Taiwan ICP CQI\u53f0\u7063\u5408\u4f5c\u5925\u4f34",
+          "to": "Cqi Taiwan Icp Cqi\u53f0\u7063\u5408\u4f5c\u5925\u4f34"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "897703"
+      ]
+    },
+    {
+      "fields": {
+        "address": {
+          "from": "No.89, Wenxian Rd., ",
+          "to": "No.89, Wenxian Rd.,"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Nantou City, Nantou County ",
+          "to": "Nantou City, Nantou County"
+        },
+        "completed_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jun 19th, 2018",
+          "to": "2018-06-19T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "929099"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": " Nantou City, Nantou County",
+          "to": "Nantou City, Nantou County"
+        },
+        "completed_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Jun 20th, 2018",
+          "to": "2018-06-20T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "NONE",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "zip": {
+          "from": " 540",
+          "to": "540"
+        }
+      },
+      "key": [
+        "939929"
+      ]
+    },
+    {
+      "fields": {
+        "altitude": {
+          "from": "",
+          "to": "NA"
+        },
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "MEDAN",
+          "to": "Medan"
+        },
+        "company": {
+          "from": "PT. ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt. Royal Pacific Indah International"
+        },
+        "completed_desc": {
+          "from": "Jun 22nd, 2018",
+          "to": "2018-06-22T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "PT.ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt.Royal Pacific Indah International"
+        },
+        "created_desc": {
+          "from": "Jun 8th, 2018",
+          "to": "2018-06-08T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "ELMAN",
+          "to": "Elman"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "ico": {
+          "from": "",
+          "to": "NA"
+        },
+        "mill": {
+          "from": "DRY MILL OR HULLING FACILITY",
+          "to": "Dry Mill Or Hulling Facility"
+        },
+        "name": {
+          "from": "PT.ROYAL PACIFIC INDAH INTERNATIONAL",
+          "to": "Pt.Royal Pacific Indah International"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "ANTON GAYO",
+          "to": "Anton Gayo"
+        },
+        "region": {
+          "from": "",
+          "to": "NA"
+        },
+        "state": {
+          "from": "SUNGGAL",
+          "to": "Sunggal"
+        }
+      },
+      "key": [
+        "940171"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "Unex (Guatemala), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "completed_desc": {
+          "from": "May 28th, 2018",
+          "to": "2018-05-28T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "May 28th, 2018",
+          "to": "2018-05-28T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "Finca Beneficio El Torre\u00f3n.",
+          "to": "Finca Beneficio El Torreon"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "name": {
+          "from": "Unex (Guatemala), S.A.",
+          "to": "Unex (guatemala), S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "Agroindustrias Cafetaleras ",
+          "to": "Agroindustrias Cafetaleras"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "946016"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "Montes de Oca",
+          "to": "Montes De Oca"
+        },
+        "company": {
+          "from": "CECA,S.A.",
+          "to": "Ceca, S.A."
+        },
+        "completed_desc": {
+          "from": "May 10th, 2019",
+          "to": "2019-05-10T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "created_desc": {
+          "from": "May 9th, 2019",
+          "to": "2019-05-09T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Beneficio Monta\u00f1as del Diamante",
+          "to": "Beneficio Monta\u00f1as Del Diamante"
+        },
+        "name": {
+          "from": "CECA, S.A.",
+          "to": "Ceca, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "950882"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "BOGOTA, DC",
+          "to": "Bogot\u00e1"
+        },
+        "company": {
+          "from": "carcafe ltda",
+          "to": "Carcafe Ltda"
+        },
+        "completed_desc": {
+          "from": "Mar 21st, 2019",
+          "to": "2019-03-21T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "created_desc": {
+          "from": "Mar 13th, 2019",
+          "to": "2019-03-13T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "EL PRADO",
+          "to": "El Prado"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "NEIVA",
+          "to": "Neiva"
+        },
+        "name": {
+          "from": "rodrigo amaya",
+          "to": "Rodrigo Amaya"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "FRANKLIN DUSSAN",
+          "to": "Franklin Dussan"
+        },
+        "region": {
+          "from": "HUILA",
+          "to": "Huila"
+        },
+        "state": {
+          "from": "BO",
+          "to": "Bogot\u00e1"
+        }
+      },
+      "key": [
+        "956625"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "MERCON GUATEMALA,S.A.",
+          "to": "Mercon Guatemala,s.A."
+        },
+        "completed_desc": {
+          "from": "Apr 1st, 2019",
+          "to": "2019-04-01T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Mar 29th, 2019",
+          "to": "2019-03-29T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "LINDA VISTA ",
+          "to": "Linda Vista"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "N",
+          "to": "FALSE"
+        },
+        "mill": {
+          "from": "BENEFICIO LINDA VISTA ",
+          "to": "Beneficio Linda Vista"
+        },
+        "name": {
+          "from": "MERCON GUATEMALA,S.A.",
+          "to": "Mercon Guatemala,s.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "PABLO ARTURO CHUY FLORES",
+          "to": "Pablo Arturo Chuy Flores"
+        },
+        "region": {
+          "from": "SANTA ROSA",
+          "to": "Santa Rosa"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "984448"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "company": {
+          "from": "EXPORTCAFE,S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "completed_desc": {
+          "from": "Apr 15th, 2019",
+          "to": "2019-04-15T00:00:00Z"
+        },
+        "created_desc": {
+          "from": "Apr 15th, 2019",
+          "to": "2019-04-15T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "FINCA ALTA LUZ ",
+          "to": "Finca Alta Luz"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "grade_f": {
+          "from": "83.50",
+          "to": "83.5"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "mill": {
+          "from": "Agua Santa ",
+          "to": "Agua Santa"
+        },
+        "name": {
+          "from": "EXPORTCAFE,S.A.",
+          "to": "Exportcafe, S.A."
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "region": {
+          "from": "Huehuetenango ",
+          "to": "Huehuetenango"
+        },
+        "state": {
+          "from": "Outside the United States",
+          "to": "Outside The United States"
+        }
+      },
+      "key": [
+        "987192"
+      ]
+    },
+    {
+      "fields": {
+        "buyer": {
+          "from": "",
+          "to": "NA"
+        },
+        "city": {
+          "from": "shanghai",
+          "to": "Shanghai"
+        },
+        "company": {
+          "from": "essence coffee \u8cea\u9928\u5496\u5561",
+          "to": "Essence Coffee \u8cea\u9928\u5496\u5561"
+        },
+        "completed_desc": {
+          "from": "Jun 25th, 2018",
+          "to": "2018-06-25T00:00:00Z"
+        },
+        "createdBy_name": {
+          "from": "essencecafe",
+          "to": "Essencecafe"
+        },
+        "created_desc": {
+          "from": "Jul 2nd, 2018",
+          "to": "2018-07-02T00:00:00Z"
+        },
+        "description": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm": {
+          "from": "none",
+          "to": "None"
+        },
+        "farm_lat": {
+          "from": "",
+          "to": "NA"
+        },
+        "farm_long": {
+          "from": "",
+          "to": "NA"
+        },
+        "green_pass": {
+          "from": "Y",
+          "to": "TRUE"
+        },
+        "icp_title": {
+          "from": "Blossom Valley International ",
+          "to": "Blossom Valley International"
+        },
+        "mill": {
+          "from": "none",
+          "to": "None"
+        },
+        "offer": {
+          "from": "",
+          "to": "NA"
+        },
+        "producer": {
+          "from": "none",
+          "to": "None"
+        },
+        "region": {
+          "from": "Yigarcheffe",
+          "to": "Yirgacheffe"
+        },
+        "zip": {
+          "from": "",
+          "to": "NA"
+        }
+      },
+      "key": [
+        "990730"
+      ]
+    }
+  ],
+  "removed": [
+    {
+      "DT_RowId": "742679",
+      "address": "Calle 72 No10-07 ofic1301",
+      "altitude": "442",
+      "altitude_unit": "m",
+      "bags": "275",
+      "buyer": "",
+      "carrier": "NA",
+      "city": "Bogot\u00e1",
+      "company": "CARCAFE",
+      "completed": "1541801476",
+      "completed_desc": "Nov 9th, 2018",
+      "country": "NA",
+      "country_title": "NA",
+      "created": "1541600231",
+      "createdBy": "16539",
+      "createdBy_name": "rodrigo amaya",
+      "createdBy_username": "rodrigoamaya",
+      "created_desc": "Nov 7th, 2018",
+      "description": "",
+      "farm": "El Prado",
+      "farm_lat": "",
+      "farm_long": "",
+      "grade": "NA",
+      "grade_f": "0",
+      "grade_id": "334473",
+      "green_pass": "NA",
+      "harvest": "2018 / 2019",
+      "iam": "3",
+      "ico": "3-59-0507",
+      "icp": "40",
+      "icp_short": "CQI COL SAS",
+      "icp_title": "CQI Colombia SAS",
+      "image_1": "NA",
+      "image_2": "NA",
+      "image_3": "NA",
+      "image_4": "NA",
+      "image_5": "NA",
+      "invoice": "50007",
+      "lot": "3-59-0507",
+      "mill": "Neiva",
+      "name": "Rodrigo Amaya ",
+      "offer": "",
+      "origin": "48",
+      "origin_title": "Colombia",
+      "pass_cert": "0",
+      "phone": "3137474",
+      "processing": "NA",
+      "producer": "Franklin Dussan",
+      "random_id": "742679",
+      "reason": "3",
+      "region": "Huila",
+      "row_index": "51",
+      "ship": "NA",
+      "species": "1",
+      "species_short": "arabica",
+      "species_title": "Arabica",
+      "stage": "6",
+      "stage_title": "Completed",
+      "state": "Bogot\u00e1",
+      "status": "1",
+      "thiscoffee": "1",
+      "url": "NA",
+      "varietal": "6",
+      "viewable": "1",
+      "weight": "70",
+      "weight_unit": "kg",
+      "zip": ""
+    },
+    {
+      "DT_RowId": "995923",
+      "address": "Komplek Pergudangan Jatim Wood Karya Jaya, Jl. Raya Kletek 41A, Blok 2C",
+      "altitude": "1200",
+      "altitude_unit": "m",
+      "bags": "300",
+      "buyer": "",
+      "carrier": "NA",
+      "city": "Sepanjang, Taman,  Sidoarjo",
+      "company": "PT Rajawali Artha Agro Sejahtera (PTRAAS)",
+      "completed": "1549520618",
+      "completed_desc": "Feb 7th, 2019",
+      "country": "104",
+      "country_title": "Indonesia",
+      "created": "1549680852",
+      "createdBy": "22212",
+      "createdBy_name": "PTRAAS",
+      "createdBy_username": "ptraas",
+      "created_desc": "Feb 9th, 2019",
+      "description": "",
+      "farm": "Pondokbaru, bener meriah",
+      "farm_lat": "",
+      "farm_long": "",
+      "grade": "81.17",
+      "grade_f": "81.17",
+      "grade_id": "860430",
+      "green_pass": "N",
+      "harvest": "2018",
+      "iam": "3",
+      "ico": "15/1803/676",
+      "icp": "8",
+      "icp_short": "SCAI",
+      "icp_title": "Specialty Coffee Association of Indonesia",
+      "image_1": "NA",
+      "image_2": "NA",
+      "image_3": "NA",
+      "image_4": "NA",
+      "image_5": "NA",
+      "invoice": "51992",
+      "lot": "ptraas-number CQI-no.1",
+      "mill": "Pondokbaru, bener meriah",
+      "name": "PTRAAS",
+      "offer": "",
+      "origin": "104",
+      "origin_title": "Indonesia",
+      "pass_cert": "0",
+      "phone": "+62 8222 3088 1429",
+      "processing": "2",
+      "producer": "PT. RAAS",
+      "random_id": "995923",
+      "reason": "3",
+      "region": "Sumatera Mandheling",
+      "row_index": "68",
+      "ship": "NA",
+      "species": "1",
+      "species_short": "arabica",
+      "species_title": "Arabica",
+      "stage": "6",
+      "stage_title": "Completed",
+      "state": "East Java",
+      "status": "1",
+      "thiscoffee": "1",
+      "url": "NA",
+      "varietal": "34",
+      "viewable": "1",
+      "weight": "60",
+      "weight_unit": "kg",
+      "zip": "61257"
+    }
+  ]
+}

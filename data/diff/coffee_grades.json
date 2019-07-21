@@ -1,0 +1,25 @@
+{
+  "_index": [
+    "random_id"
+  ],
+  "added": [],
+  "changed": [],
+  "removed": [
+    {
+      "acidity": "7.5",
+      "after": "6.9166666666667",
+      "aroma": "7.5833333333333",
+      "balance": "7.25",
+      "body": "7.25",
+      "clean": "10",
+      "flavor": "7.4166666666667",
+      "mouthfeel": "0",
+      "overall": "7.25",
+      "pass": "1",
+      "random_id": "995923",
+      "sweet": "10",
+      "total": "81.166666666667",
+      "uniformity": "10"
+    }
+  ]
+}
