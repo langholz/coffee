@@ -395,42 +395,116 @@ Using `or2yw`[^7] three YesWorklow files (included in the supplemental informati
 
 ### Changes summary {#changes_summary}
 
-```{r echo=FALSE, ref.label="calculate_csv_diff_summaries", eval=TRUE, warning=FALSE}
+```{r echo=FALSE, ref.label="calculate_row_diff_summaries", eval=TRUE, warning=FALSE}
 ```
 
-Using `csvdiff`[^8], the changes performed in total and at each stage can be calculated per each file by the amount rows that were either removed, added and/or changed.
+```{r echo=FALSE, ref.label="calculate_cell_diff_summaries", eval=TRUE, warning=FALSE}
+```
+
+Using `csvdiff`[^8], the changes performed in total and at each stage can be calculated per each file by the amount rows that were either removed, added and/or changed. For cell changes, `csv_diff`[^9] was used to complete the presented results.
 
 #### By type and stages
 
-The changes by type and stages can be [summarized](#calculate_csv_diff_summaries) with the following tables.
+The changes by type and stages can be [summarized](#calculate_row_diff_summaries) with the following tables.
 
 ##### Coffee information
 
-```{r coffee_information_results_summary, echo=FALSE}
-kable(summaries[[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+##### Row changes
+
+```{r coffee_information_row_results_summary, echo=FALSE}
+kable(row_summaries[[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+\pagebreak
+
+##### OpenRefine cell changes
+
+```{r coffee_information_openrefine_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[1]][[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+\pagebreak
+
+##### R cell changes
+
+```{r coffee_information_r_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[1]][[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+\pagebreak
+
+##### Constraints cell changes
+
+```{r coffee_information_constraints_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[1]][[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 ##### Grades/Cupping scores
 
 ```{r grading_cupping_scores_results_summary, echo=FALSE}
-kable(summaries[[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+kable(row_summaries[[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### OpenRefine cell changes
+
+```{r grading_cupping_openrefine_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[2]][[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### R cell changes
+
+```{r grading_cupping_r_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[2]][[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### Constraints cell changes
+
+```{r grading_cupping_constraints_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[2]][[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 ##### Green analysis
 
 ```{r green_analysis_results_summary, echo=FALSE}
-kable(summaries[[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+kable(row_summaries[[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### OpenRefine cell changes
+
+```{r green_analysis_openrefine_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[3]][[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### R cell changes
+
+```{r green_analysis_r_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[3]][[2]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+##### Constraints cell changes
+
+```{r green_analysis_constraints_cell_results_summary, echo=FALSE}
+kable(cell_summaries[[3]][[3]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 #### Totals
 
-```{r echo=FALSE, ref.label="calculate_total_csv_diff_summaries", eval=TRUE, warning=FALSE}
+```{r echo=FALSE, ref.label="calculate_total_row_diff_summaries", eval=TRUE, warning=FALSE}
 ```
 
-The total changes between when the data was first downloaded and the final data cleaning changes can then be [summarized](#calculate_total_csv_diff_summaries) as follows:
+```{r echo=FALSE, ref.label="calculate_total_cell_diff_summaries", eval=TRUE, warning=FALSE}
+```
 
-```{r total_results_summary, echo=FALSE}
-kable(total_summaries_df) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+The total row changes between when the data that was first downloaded and the final data cleaning changes can then be [summarized](#calculate_total_row_diff_summaries) as follows:
+
+```{r total_row_results_summary, echo=FALSE}
+kable(total_row_summaries) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
+```
+
+Since only the coffee information ended with changes, the total cell changes between when the data that was first downloaded and the final data cleaning changes can then be [summarized](#calculate_total_cell_diff_summaries) as follows:
+
+```{r total_cell_results_summary, echo=FALSE}
+kable(total_cell_summaries[[1]]) %>% kable_styling(position = "center") %>% row_spec(0, bold = TRUE)
 ```
 
 The difference files were also [calculated](#calculate_total_csv_diff_files) and are stored in the supplemental information under the `data/diff` directory.
@@ -963,9 +1037,9 @@ result <- mapply(
   worfklow_image_paths)
 ```
 
-### Calculate CSV difference summaries {#calculate_csv_diff_summaries}
+### Calculate row difference summaries {#calculate_row_diff_summaries}
 
-```{r calculate_csv_diff_summaries, echo=TRUE, eval=FALSE}
+```{r calculate_row_diff_summaries, echo=TRUE, eval=FALSE}
 create_file_path_pairs <- function (paths, file_names) {
   lapply(file_names, function (file_name) {
     file_paths <- sapply(paths, function (path, file) {
@@ -988,7 +1062,7 @@ create_file_path_pairs <- function (paths, file_names) {
   })
 }
 
-csvdiff_summary <- function (source_file_path, target_file_path) {
+csvdiff_row_summary <- function (source_file_path, target_file_path) {
   source <- file.path(getwd(), source_file_path)
   target <- file.path(getwd(), target_file_path)
   command <- paste0(
@@ -1005,9 +1079,9 @@ paths <- c(download_path, openrefine_path, clean_path, final_path)
 file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
 file_path_pairs <- create_file_path_pairs(paths, file_names)
 
-summaries <- lapply(file_path_pairs, function (file_pairs) {
+row_summaries <- lapply(file_path_pairs, function (file_pairs) {
   file_summaries <- lapply(file_pairs, function (pair) {
-    summary <- csvdiff_summary(pair$source, pair$target)
+    summary <- csvdiff_row_summary(pair$source, pair$target)
     result <- NULL
     if (length(summary) > 1) {
       removed <- gsub("removed ", "", summary[1])
@@ -1035,16 +1109,92 @@ summaries <- lapply(file_path_pairs, function (file_pairs) {
 })
 ```
 
-### Calculate total CSV difference summaries {#calculate_total_csv_diff_summaries}
+### Calculate cell difference summaries {#calculate_cell_diff_summaries}
 
-```{r calculate_total_csv_diff_summaries, echo=TRUE, eval=FALSE}
+```{r calculate_cell_diff_summaries, echo=TRUE, eval=FALSE}
+file_empty <- function (file_path) {
+  info <- file.info(file_path)
+  empty <- info$size == 0
+  empty
+}
+
+csvdiff_cell_summary <- function (source_file_path, target_file_path) {
+  source <- file.path(getwd(), source_file_path)
+  target <- file.path(getwd(), target_file_path)
+  command <- paste0(
+    "python3 ./deps/csv_diff.py -src \"",
+    source,
+    "\" -dest \"",
+    target,
+    "\" -keys random_id")
+  try(system(command, intern = TRUE))
+  field_change <- data.frame()
+  if (!file_empty("field_change_percent.csv") && !file_empty("field_change_sum.csv")) {
+    field_change_percent <- read.csv(
+      "field_change_percent.csv",
+      header = FALSE,
+      stringsAsFactors = FALSE)
+    colnames(field_change_percent) <- c("column_name", "percent")
+    remove <- field_change_percent$column_name != "No Field"
+    field_change_percent <- field_change_percent[remove, ]
+    field_change_sum <- read.csv(
+      "field_change_sum.csv",
+      header = FALSE,
+      stringsAsFactors = FALSE)
+    colnames(field_change_sum) <- c("column_name", "sum")
+    remove <- field_change_sum$column_name != "No Field"
+    field_change_sum <- field_change_sum[remove, ]
+    field_change <- merge(field_change_percent,  field_change_sum, by = c("column_name"))
+    file.remove("results_details.json")
+    file.remove("field_change_percent.csv")
+    file.remove("field_change_sum.csv")
+  }
+
+  if (is.null(field_change) || nrow(field_change) == 0) {
+    field_change <- data.frame(matrix(ncol = 3, nrow = 0))
+    colnames(field_change) <- c("column_name", "percent", "sum")
+  }
+
+  field_change
+}
+
+reformat_cell_summary <- function (summary) {
+  reformatted_summary <- data.frame(matrix(ncol = 2, nrow = 0))
+  colnames(reformatted_summary) <- c("column_name", "cells_changed")
+  if (nrow(summary) > 0) {
+    percent <- round(summary$percent, 1)
+    cells_changed <- paste0(summary$sum, " cells (", percent, "%)")
+    reformatted_summary <- data.frame(
+      column_name = summary$column_name,
+      cells_changed = cells_changed
+    )
+  }
+
+  colnames(reformatted_summary) <- c("Column name", "Changed")
+  reformatted_summary
+}
+
+cell_summaries <- lapply(file_path_pairs, function (file_pairs) {
+  file_summaries <- lapply(file_pairs, function (pair) {
+    summary <- csvdiff_cell_summary(pair$source, pair$target)
+    summary <- reformat_cell_summary(summary)
+  })
+
+  file_summaries
+})
+
+```
+
+### Calculate total row difference summaries {#calculate_total_row_diff_summaries}
+
+```{r calculate_total_row_diff_summaries, echo=TRUE, eval=FALSE}
 paths <- c(download_path, final_path)
 file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
 file_path_pairs <- create_file_path_pairs(paths, file_names)
 
 total_summaries <- lapply(file_path_pairs, function (file_pair) {
   pair <- file_pair[[1]]
-  summary <- csvdiff_summary(pair$source, pair$target)
+  summary <- csvdiff_row_summary(pair$source, pair$target)
   result <- NULL
   if (length(summary) > 1) {
     removed <- gsub("removed ", "", summary[1])
@@ -1064,12 +1214,28 @@ total_summaries <- lapply(file_path_pairs, function (file_pair) {
   }
 })
 
-total_summaries_df <- do.call(rbind, total_summaries)
-rownames(total_summaries_df) <- c(
+total_row_summaries <- do.call(rbind, total_summaries)
+rownames(total_row_summaries) <- c(
   "Coffee information",
   "Grades/Cupping scores",
   "Green analysis")
 ```
+
+### Calculate total cell difference summaries {#calculate_total_cell_diff_summaries}
+
+```{r calculate_total_cell_diff_summaries, echo=TRUE, eval=FALSE}
+paths <- c(download_path, final_path)
+file_names <- c("coffees.csv", "coffee_grades.csv", "coffee_greens.csv")
+file_path_pairs <- create_file_path_pairs(paths, file_names)
+
+total_cell_summaries <- lapply(file_path_pairs, function (file_pair) {
+  pair <- file_pair[[1]]
+  summary <- csvdiff_cell_summary(pair$source, pair$target)
+  summary <- reformat_cell_summary(summary)
+  summary
+})
+```
+
 
 ### Create total CSV difference files {#calculate_total_csv_diff_files}
 
@@ -1138,3 +1304,4 @@ diff_file_paths)
 [^6]: YesWorkflow - GitHub. In *GitHub*. Retrieved June 6, 2019 from https://github.com/yesworkflow-org/
 [^7]: or2ywtool - PyPI. In *PyPI – the Python Package Index*. Retrieved July 17, 2019 from https://pypi.org/project/or2ywtool/
 [^8]: csvdiff - PyPI. In *PyPI – the Python Package Index*. Retrieved July 14, 2019 from https://pypi.org/project/csvdiff/
+[^9]: helpers-scripts/csv_diff.py at master - maozza/helpers-scripts. In *Github*. Retrieved July 20, 2019 from https://github.com/maozza/helpers-scripts/blob/master/csv_diff.py
